@@ -1,0 +1,98 @@
+[2025-12-10 21:52:49,896] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:49,897] WARNING in consulta_controller: Petición rechazada: payload vacío
+[2025-12-10 21:52:49,903] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:49,903] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 21:52:49,908] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:49,909] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 21:52:49,913] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:49,919] ERROR in consulta_controller: Error de validación: Consulta no reconocida
+[2025-12-10 21:52:49,923] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:50,791] INFO in consulta_controller: Consulta ejecutada exitosamente en 868.14ms
+[2025-12-10 21:52:50,795] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:52:51,040] INFO in consulta_controller: Consulta ejecutada exitosamente en 244.82ms
+[2025-12-10 21:56:15,273] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:15,276] WARNING in consulta_controller: Petición rechazada: payload vacío
+[2025-12-10 21:56:15,289] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:15,292] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 21:56:15,303] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:15,305] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 21:56:15,317] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:15,330] ERROR in consulta_controller: Error de validación: Consulta no reconocida
+[2025-12-10 21:56:15,345] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:16,569] INFO in consulta_controller: Consulta ejecutada exitosamente en 1223.74ms
+[2025-12-10 21:56:16,579] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 21:56:16,810] INFO in consulta_controller: Consulta ejecutada exitosamente en 230.36ms
+[2025-12-10 22:01:31,893] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:31,895] WARNING in consulta_controller: Petición rechazada: payload vacío
+[2025-12-10 22:01:31,902] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:31,902] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 22:01:31,908] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:31,909] WARNING in consulta_controller: Petición rechazada: SQL vacío
+[2025-12-10 22:01:31,916] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:31,921] ERROR in consulta_controller: Error de validación: Consulta no reconocida
+[2025-12-10 22:01:31,927] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:33,286] ERROR in consulta_controller: Error inesperado en procesar_consulta
+Traceback (most recent call last):
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 929, in request
+    return super(_Client, self).request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\_http_client.py", line 124, in request
+    resp.raise_for_status()
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://tic-firebase-default-rtdb.firebaseio.com/usuarios/101.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\controllers\consulta_controller.py", line 32, in procesar_consulta
+    resultado = traducir_y_ejecutar(original)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\services\traductor_service.py", line 11, in traducir_y_ejecutar
+    data = get_usuario(result[2])
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\database\firebase_client.py", line 19, in get_usuario
+    return ref.get()
+           ^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 221, in get
+    return self._client.body('get', self._add_suffix(), params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\_http_client.py", line 136, in body
+    resp = self.request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 931, in request
+    raise _Client.handle_rtdb_error(error)
+firebase_admin.exceptions.NotFoundError: 404 Not Found
+[2025-12-10 22:01:33,463] INFO in consulta_controller: Nueva petición recibida en /consulta
+[2025-12-10 22:01:33,650] ERROR in consulta_controller: Error inesperado en procesar_consulta
+Traceback (most recent call last):
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 929, in request
+    return super(_Client, self).request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\_http_client.py", line 124, in request
+    resp.raise_for_status()
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://tic-firebase-default-rtdb.firebaseio.com/usuarios/101.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\controllers\consulta_controller.py", line 45, in procesar_consulta
+    resultado = ejecutar_nosql(consulta_nosql)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\services\traductor_service.py", line 127, in ejecutar_nosql
+    return get_usuario(consulta["id"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\Documents\Ale\Noveno\TIC\middleware_firebase\database\firebase_client.py", line 19, in get_usuario
+    return ref.get()
+           ^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 221, in get
+    return self._client.body('get', self._add_suffix(), params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\_http_client.py", line 136, in body
+    resp = self.request(method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sebastian\AppData\Local\Programs\Python\Python311\Lib\site-packages\firebase_admin\db.py", line 931, in request
+    raise _Client.handle_rtdb_error(error)
+firebase_admin.exceptions.NotFoundError: 404 Not Found
