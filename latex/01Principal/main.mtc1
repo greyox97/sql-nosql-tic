@@ -1,0 +1,18 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}Objetivo general}{\reset@font\mtcSfont 2}{section.1.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Objetivos específicos}{\reset@font\mtcSfont 2}{section.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Alcance}{\reset@font\mtcSfont 3}{section.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Marco teórico}{\reset@font\mtcSfont 4}{section.1.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Antecedentes}{\reset@font\mtcSSfont 4}{subsection.1.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Fundamentos de bases de datos}{\reset@font\mtcSSfont 4}{subsection.1.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode SQL y el modelo relacional}{\reset@font\mtcSSSfont 4}{subsection.1.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Enfoque NoSQL}{\reset@font\mtcSSSfont 5}{subsection.1.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Bases de datos clave-valor}{\reset@font\mtcSSSfont 5}{subsection.1.4.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Firebase Realtime Database:}{\reset@font\mtcPfont 5}{subsection.1.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.3}Lenguajes y herramientas para el análisis de consultas}{\reset@font\mtcSSfont 5}{subsection.1.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Python y librerías de análisis}{\reset@font\mtcSSSfont 5}{subsection.1.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Herramientas de desarrollo}{\reset@font\mtcSSSfont 5}{subsection.1.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.4}Frameworks}{\reset@font\mtcSSfont 6}{subsection.1.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Flask}{\reset@font\mtcSSSfont 6}{subsection.1.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode React y Next.js}{\reset@font\mtcSSSfont 6}{subsection.1.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.5}Metodología de desarrollo}{\reset@font\mtcSSfont 6}{subsection.1.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.6}Pruebas de software}{\reset@font\mtcSSfont 6}{subsection.1.4.6}}

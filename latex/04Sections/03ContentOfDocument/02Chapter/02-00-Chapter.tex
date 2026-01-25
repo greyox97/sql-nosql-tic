@@ -1,0 +1,1121 @@
+\section{Marco de trabajo: SCRUM}
+
+El middleware se desarrolló bajo el marco de trabajo Scrum, seleccionado por su enfoque iterativo e incremental que facilita la gestión de proyectos con requisitos cambiantes. La metodología permite trabajar en ciclos cortos (sprints), entregar funcionalidades al final de cada iteración y ajustar el plan según los hallazgos obtenidos.
+
+\subsection{Justificación de la metodología}
+
+La elección de Scrum se fundamentó en cuatro razones principales:
+
+\begin{itemize}
+    \item \textbf{Naturaleza exploratoria del proyecto:} Al inicio no era claro cuántas cláusulas SQL podrían soportarse ni cómo se comportaría Firebase ante filtros complejos. Scrum permite descubrir estas limitaciones de forma progresiva.
+    
+    \item \textbf{Gestión de riesgos técnicos:} La integración de \texttt{sqlparse} con expresiones regulares, la conexión con Firebase y el desarrollo del frontend representaban múltiples puntos de fallo potencial. Los sprints cortos facilitan la detección temprana de problemas.
+    
+    \item \textbf{Entregas incrementales:} Cada sesión se obtenía una versión funcional que podía probarse y demostrarse, permitiendo la validación temprana.
+    
+    \item \textbf{Flexibilidad:} Si durante el desarrollo se detectaba que alguna funcionalidad no era viable, el backlog podía reordenarse sin afectar el avance general.
+\end{itemize}
+
+\subsection{Aplicación de Scrum en el proyecto}
+
+Los sprints tuvieron una duración de dos semanas cada uno. A continuación se describe la adaptación de roles, artefactos y eventos de Scrum al contexto de este proyecto de tesis individual.
+
+\subsubsection{Roles asignados}
+
+Los roles de Scrum se adaptaron para ajustarse a la estructura del proyecto:
+
+\begin{table}[H]
+    \centering
+    \caption{Roles de Scrum aplicados al proyecto}
+    \begin{tabular}{|p{0.25\textwidth}|p{0.65\textwidth}|}
+        \hline
+        \textbf{Rol} & \textbf{Asignación en el proyecto} \\
+        \hline
+        Product Owner & Msc. Víctor Velepucha (Director de tesis), responsable de definir y validar los objetivos del proyecto, aprobar el alcance funcional y priorizar las historias de usuario según el valor académico y técnico. \\
+        \hline
+        Scrum Master & Msc. Víctor Velepucha (Director de tesis), encargado de facilitar el proceso Scrum, identificar y ayudar a resolver bloqueos técnicos y metodológicos, y guiar al equipo de desarrollo. \\
+        \hline
+        Development Team & Sebastián Sánchez (estudiante), responsable del diseño, implementación, pruebas e integración del middleware. \\
+        \hline
+    \end{tabular}
+    \label{tab:roles_scrum}
+\end{table}
+
+\subsubsection{Artefactos utilizados}
+
+Se implementaron los siguientes artefactos para la gestión del trabajo:
+
+\begin{table}[H]
+    \centering
+    \caption{Artefactos de Scrum en el proyecto}
+    \begin{tabular}{|p{0.25\textwidth}|p{0.65\textwidth}|}
+        \hline
+        \textbf{Artefacto} & \textbf{Implementación} \\
+        \hline
+        Product Backlog & Lista completa de historias de usuario (HU01 a HU08), desglosadas en tareas técnicas con estimaciones en horas y puntos de historia. Priorizada según dependencias técnicas y valor funcional. \\
+        \hline
+        Sprint Backlog & Subconjunto de historias seleccionadas para cada sprint de dos semanas, con plan detallado de tareas y seguimiento diario de progreso. \\
+        \hline
+        Incremento & Versión ejecutable del middleware al finalizar cada sprint, con nuevas funcionalidades operativas validadas mediante pruebas. \\
+        \hline
+    \end{tabular}
+    \label{tab:artefactos_scrum}
+\end{table}
+
+\subsubsection{Eventos realizados}
+
+Los eventos se ajustaron para el seguimiento del trabajo individual:
+
+\begin{table}[H]
+    \centering
+    \caption{Eventos de Scrum aplicados}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|p{0.20\textwidth}|p{0.35\textwidth}|p{0.40\textwidth}|}
+        \hline
+        \textbf{Evento} & \textbf{Periodicidad} & \textbf{Actividades Realizadas} \\
+        \hline
+        Sprint & 2 semanas & Desarrollo iterativo de funcionalidades según historias de usuario priorizadas. \\
+        \hline
+        Sprint Planning & Inicio de cada sprint & Selección de historias de usuario, definición de objetivos del sprint, descomposición en tareas técnicas. \\
+        \hline
+        Daily Scrum & Diario (registro personal) & Seguimiento diario de tareas completadas, en progreso y bloqueadas. \\
+        \hline
+        Sprint Review & Final de cada sprint & Validación de criterios de aceptación, demostración de funcionalidades, documentación del incremento con capturas de pantalla. \\
+        \hline
+        Sprint Retrospective & Final de cada sprint & Análisis de aspectos positivos, dificultades encontradas y oportunidades de mejora documentadas para futuros sprints. \\
+        \hline
+    \end{tabular}%
+    }
+    \label{tab:eventos_scrum}
+\end{table}
+
+\subsubsection{Flujo de trabajo}
+
+En la práctica, cada sprint siguió el siguiente flujo:
+
+\begin{enumerate}
+    \item \textbf{Planificación:} Se seleccionaban las historias a abordar, se fijaban metas concretas y se dividía el trabajo en tareas pequeñas, asegurando que pudieran completarse dentro del sprint.
+    \item \textbf{Desarrollo:} Se programaba, se ejecutaban pruebas y se realizaban commits frecuentes al repositorio.
+    \item \textbf{Seguimiento:} Se llevaba un registro diario del avance. Si algo se bloqueaba, se buscaba solución de inmediato.
+    \item \textbf{Revisión:} Al cierre del sprint, se verificaba el cumplimiento de los criterios de aceptación.
+    \item \textbf{Retrospectiva:} Se analizaba qué funcionó, qué no, y qué ajustar para la siguiente iteración.
+\end{enumerate}
+
+Este ritmo permitió entregar funcionalidades de forma sostenida y detectar problemas antes de que escalaran.
+
+\section{Fase exploratoria}
+
+Antes de iniciar la implementación, se definieron varios aspectos fundamentales: la funcionalidad requerida del middleware, los usuarios objetivo y las características imprescindibles del sistema. En esta etapa se identificaron los actores involucrados, se acotó el alcance y se redactaron las historias de usuario que guiarían el desarrollo.
+
+\subsection{Stakeholders}
+
+Identificar a los interesados permite comprender las expectativas del proyecto y establecer sus límites. La Tabla~\ref{tab:stakeholders} resume los roles que participaron en el desarrollo y evaluación del middleware.
+
+\begin{table}[H]
+    \centering
+    \caption{Stakeholders del proyecto}
+    \begin{tabular}{|p{0.25\textwidth}|p{0.30\textwidth}|p{0.35\textwidth}|}
+        \hline
+        \textbf{Stakeholder} & \textbf{Rol} & \textbf{Responsabilidades} \\
+        \hline
+        Msc. Víctor Velepucha & Director de tesis / Product Owner / Scrum Master & Definir objetivos académicos, aprobar el alcance, revisar entregas y gestionar bloqueos. \\
+        \hline
+        Sebastián Sánchez & Estudiante / Development Team & Diseñar, programar, probar y documentar el middleware. \\
+        \hline
+        Usuario final (hipotético) & Usuario del middleware & Ingresar consultas SQL y visualizar resultados provenientes de Firebase. \\
+        \hline
+    \end{tabular}
+    \label{tab:stakeholders}
+\end{table}
+
+En la práctica, el Director de tesis asume dos roles: define prioridades (Product Owner) y facilita el proceso (Scrum Master). El estudiante ejecuta las tareas técnicas. El usuario final y el tribunal académico evalúan el producto terminado.
+
+\subsection{Historias de usuario}
+
+Para establecer con claridad la funcionalidad requerida, se llevó a cabo un proceso de elicitación de requisitos que resultó en ocho historias de usuario (HU01 a HU08). Cada una describe una funcionalidad desde la perspectiva del usuario, siguiendo el formato típico de Scrum.
+
+Las historias cubren todo el flujo de interacción:
+\begin{itemize}
+    \item \textbf{Entrada y ejecución:} Ingreso de consultas SQL con validación básica (HU01) y su ejecución (HU02).
+    \item \textbf{Traducción:} Visualización de la consulta transformada a NoSQL (HU03) y manejo de mensajes de error (HU04).
+    \item \textbf{Resultados:} Presentación de datos en formato tabular (HU05) y comparación entre consulta original y traducida (HU06).
+    \item \textbf{Experiencia:} Interfaz organizada (HU07) y retroalimentación visual sobre el estado del sistema (HU08).
+\end{itemize}
+
+Cada historia se estimó con puntos de historia (secuencia Fibonacci), considerando complejidad y riesgo, y se priorizó según valor funcional y dependencias técnicas.
+
+\subsubsection{Detalle de historias de usuario}
+
+% Tabla HU01
+\begin{table}[H]
+    \centering
+    \caption{HU01 --- Ingresar una consulta SQL}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU01 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Ingresar una consulta SQL \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Bajo \\
+        \textbf{Puntos estimados} & 3 \\
+        %\textbf{Iteraci\'on asignada} & 1 \\
+        \textbf{Descripci\'on} & Como usuario, quiero ingresar una sentencia SQL en un \'{a}rea de texto para realizar consultas sobre la base de datos NoSQL. \\
+        \textbf{Criterios de aceptaci\'on} & El sistema acepta sentencias SQL b\'asicas. Se valida la sintaxis antes de ejecutar. El usuario puede editar y limpiar el \'{a}rea de consulta. \\
+        \textbf{Observaciones} & El \'{a}rea debe tener resaltado de sintaxis para mejorar la legibilidad. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU01}
+\end{table}
+
+% Tabla HU02
+\begin{table}[H]
+    \centering
+    \caption{HU02 --- Ejecutar la consulta SQL}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU02 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Ejecutar la consulta SQL \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Medio \\
+        \textbf{Puntos estimados} & 5 \\
+        %\textbf{Iteraci\'on asignada} & 1 \\
+        \textbf{Descripci\'on} & Como usuario, quiero ejecutar mi consulta SQL y recibir una respuesta clara sobre el resultado de la operaci\'on. \\
+        \textbf{Criterios de aceptaci\'on} & Bot\'on visible para ejecutar la consulta. El sistema muestra un mensaje si la consulta es inv\'alida. Se registra el tiempo de ejecuci\'on. \\
+        \textbf{Observaciones} & Mostrar indicadores visuales de progreso mientras se ejecuta. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU02}
+\end{table}
+
+% Tabla HU03
+\begin{table}[H]
+    \centering
+    \caption{HU03 --- Ver la traducci\'on generada de la consulta}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU03 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Ver la traducci\'on generada de la consulta \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Medio \\
+        \textbf{Puntos estimados} & 8 \\
+        %\textbf{Iteraci\'on asignada} & 2 \\
+        \textbf{Descripci\'on} & Como usuario, quiero visualizar c\'omo mi consulta SQL fue traducida a una operaci\'on NoSQL para entender el proceso de transformaci\'on. \\
+        \textbf{Criterios de aceptaci\'on} & Se muestra la traducci\'on generada al lenguaje NoSQL. La correspondencia entre SQL y NoSQL es comprensible. Se puede copiar o expandir la traducci\'on. \\
+        \textbf{Observaciones} & Mostrar la traducci\'on en un panel separado junto a la consulta original. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU03}
+\end{table}
+
+% Tabla HU04
+\begin{table}[H]
+    \centering
+    \caption{HU04 --- Identificar errores en la traducci\'on}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU04 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Identificar errores en la traducci\'on \\
+        \textbf{Prioridad en negocio} & Media \\
+        \textbf{Riesgo en desarrollo} & Medio \\
+        \textbf{Puntos estimados} & 3 \\
+        %\textbf{Iteraci\'on asignada} & 2 \\
+        \textbf{Descripci\'on} & Como usuario, quiero recibir un mensaje claro si la traducci\'on de mi consulta SQL no puede realizarse para corregirla f\'acilmente. \\
+        \textbf{Criterios de aceptaci\'on} & Se muestra un mensaje descriptivo cuando no se puede traducir la sentencia. El mensaje indica la parte problem\'atica de la consulta. No se pierde la consulta ingresada. \\
+        \textbf{Observaciones} & Debe mantener la consulta original visible al mostrar el error. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU04}
+\end{table}
+
+% Tabla HU05
+\begin{table}[H]
+    \centering
+    \caption{HU05 --- Visualizar resultados de la ejecuci\'on}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU05 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Visualizar resultados de la ejecuci\'on \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Bajo \\
+        \textbf{Puntos estimados} & 5 \\
+        %\textbf{Iteraci\'on asignada} & 3 \\
+        \textbf{Descripci\'on} & Como usuario, quiero ver los resultados devueltos por la base de datos NoSQL en una tabla para interpretar f\'acilmente la informaci\'on. \\
+        \textbf{Criterios de aceptaci\'on} & Los resultados se muestran en formato de tabla legible. Se indica cantidad de registros devueltos. El \'{a}rea de resultados se limpia entre ejecuciones. \\
+        \textbf{Observaciones} & Permitir desplazamiento horizontal y vertical en resultados extensos. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU05}
+\end{table}
+
+% Tabla HU06
+\begin{table}[H]
+    \centering
+    \caption{HU06 --- Ver la consulta original y la traducci\'on simult\'aneamente}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU06 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Ver la consulta original y la traducci\'on simult\'aneamente \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Medio \\
+        \textbf{Puntos estimados} & 8 \\
+        %\textbf{Iteraci\'on asignada} & 3 \\
+        \textbf{Descripci\'on} & Como usuario, quiero ver al mismo tiempo mi consulta original y su traducci\'on NoSQL para comparar ambas f\'acilmente. \\
+        \textbf{Criterios de aceptaci\'on} & Ambas sentencias se muestran lado a lado o en paneles apilados. Se mantiene sincron\'{\i}a al desplazarse entre paneles. El usuario puede ocultar o mostrar la traducci\'on. \\
+        \textbf{Observaciones} & Ideal para entornos educativos o de validaci\'on visual. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU06}
+\end{table}
+
+% Tabla HU07
+\begin{table}[H]
+    \centering
+    \caption{HU07 --- Interfaz intuitiva y ordenada}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU07 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Interfaz intuitiva y ordenada \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Bajo \\
+        \textbf{Puntos estimados} & 5 \\
+        %\textbf{Iteraci\'on asignada} & 4 \\
+        \textbf{Descripci\'on} & Como usuario, quiero que la interfaz del sistema sea clara y organizada para poder comprender r\'apidamente cada secci\'on del proceso. \\
+        \textbf{Criterios de aceptaci\'on} & La interfaz incluye secciones diferenciadas (entrada, traducci\'on, resultados). Los controles son visibles y consistentes. El dise\~no responde correctamente a distintos tama\~nos de pantalla. \\
+        \textbf{Observaciones} & Usar colores y jerarqu\'ias visuales para guiar al usuario. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU07}
+\end{table}
+
+% Tabla HU08
+\begin{table}[H]
+    \centering
+    \caption{HU08 --- Recibir retroalimentaci\'on visual durante la ejecuci\'on}
+    \begin{tabular}{|p{0.24\textwidth}| p{0.70\textwidth}|}
+        \hline
+        \textbf{C\'odigo} & HU08 \\
+        \textbf{Usuario} & Usuario \\
+        \textbf{Nombre historia} & Ejecuci\'on Interactiva y Retroalimentaci\'on \\
+        \textbf{Prioridad en negocio} & Alta \\
+        \textbf{Riesgo en desarrollo} & Medio \\
+        \textbf{Puntos estimados} & 5 \\
+        %\textbf{Iteraci\'on asignada} & 4 \\
+        \textbf{Descripci\'on} & Como usuario, quiero ejecutar las consultas de manera interactiva, visualizando claramente los estados de carga, \'{e}xito o error para confirmar que el sistema procesa mi solicitud. \\
+        \textbf{Criterios de aceptaci\'on} & El bot\'on de ejecuci\'on se deshabilita durante la carga. Se muestran mensajes de error detallados en consola. Los resultados se renderizan autom\'aticamente al finalizar. \\
+        \textbf{Observaciones} & Esta historia integra la l\'ogica de conexi\'on con el backend y el manejo de estados as\'{\i}ncronos. \\
+        \hline
+    \end{tabular}
+    \label{tab:HU08}
+\end{table}
+
+
+\section{Fase de inicialización}
+
+Esta fase comprendió la preparación del entorno, selección de herramientas y definición del backlog, estableciendo las bases técnicas y metodológicas del proyecto.
+
+\subsection{Sistema de puntuación}
+
+Se adoptó un sistema de puntuación basado en la secuencia de Fibonacci para estimar prioridad y complejidad, facilitando la organización del trabajo mediante el modelo de Planning Poker (Tablas \ref{tab:escala_prioridad} y \ref{tab:escala_complejidad}).
+
+\begin{table}[H]
+    \centering
+    \caption{Valoración de prioridad}
+    \begin{tabular}{|c|l|p{0.60\textwidth}|}
+        \hline
+        \textbf{Valoración} & \textbf{Nivel} & \textbf{Descripción} \\
+        \hline
+        1 & Muy baja & Funcionalidad cosmética o mejora menor. \\
+        \hline
+        2 & Baja & Funcionalidad deseable pero no esencial. \\
+        \hline
+        3 & Media & Mejora importante de la experiencia de usuario. \\
+        \hline
+        5 & Alta & Funcionalidad crítica para el sistema. \\
+        \hline
+        8 & Muy alta & Funcionalidad indispensable para el propósito básico. \\
+        \hline
+    \end{tabular}
+    \label{tab:escala_prioridad}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Valoración de complejidad}
+    \begin{tabular}{|c|l|p{0.60\textwidth}|}
+        \hline
+        \textbf{Valoración} & \textbf{Nivel} & \textbf{Descripción} \\
+        \hline
+        1 & Muy baja & Tarea trivial (1-2 horas). \\
+        \hline
+        2 & Baja & Implementación directa (3-5 horas). \\
+        \hline
+        3 & Media & Requiere integración (6-10 horas). \\
+        \hline
+        5 & Alta & Diseño técnico o dependencias (11-20 horas). \\
+        \hline
+        8 & Muy alta & Investigación previa y diseño complejo (20+ horas). \\
+        \hline
+    \end{tabular}
+    \label{tab:escala_complejidad}
+\end{table}
+
+\subsection{Herramientas y tecnologías}
+
+La selección tecnológica se orientó a la eficiencia y compatibilidad:
+
+\begin{table}[H]
+    \centering
+    \caption{Stack tecnológico seleccionado}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|p{0.5\textwidth}|}
+        \hline
+        \textbf{Capa} & \textbf{Tecnología} & \textbf{Justificación} \\
+        \hline
+        Frontend & Next.js 16 + React & Renderizado híbrido (SSR/CSR) y modularidad basada en componentes. \\
+        \hline
+        Estilos & Tailwind CSS 4 & Desarrollo rápido con clases utilitarias y diseño responsivo nativo. \\
+        \hline
+        Backend & Python + Flask & Microframework ligero ideal para prototipado rápido y servicios REST. \\
+        \hline
+        Parsing & sqlparse + Regex & \texttt{sqlparse} para estructura base y Expresiones Regulares para patrones complejos. \\
+        \hline
+        Persistencia & Firebase Realtime DB & Base de datos NoSQL alojada en la nube con sincronización en tiempo real. \\
+        \hline
+        Diagramación & Mermaid & Generación de diagramas de secuencia y arquitectura mediante código declarativo. \\
+        \hline
+    \end{tabular}%
+    }
+    \label{tab:stack_tecnologico}
+\end{table}
+
+\subsection{Entorno de desarrollo}
+
+El proyecto se alojó en un repositorio GitHub estructurado en carpetas (frontend, backend, docs, tests). Se adoptó un flujo de trabajo basado en componentes, utilizando ramas de larga duración para las capas principales (backend, frontend) que convergen en la rama de producción (main). Esta estrategia facilitó el desarrollo paralelo de la lógica y la interfaz. Las dependencias se gestionaron mediante \texttt{requirements.txt} (Python) y \texttt{package.json} (Node.js) para garantizar la reproducibilidad.
+
+\subsection{Product backlog}
+
+El backlog priorizado detalla las historias de usuario según su valor funcional y complejidad técnica:
+
+\begin{table}[H]
+    \centering
+    \caption{Valoración de prioridad y complejidad de historias de usuario}
+    \begin{tabular}{|l|c|c|l|l|}
+        \hline
+        \textbf{HU} & \textbf{Prioridad} & \textbf{Complejidad} & \textbf{Nivel prioridad} & \textbf{Nivel complejidad} \\
+        \hline
+        HU01 & 8 & 3 & Muy alta & Media \\
+        HU02 & 8 & 5 & Muy alta & Alta \\
+        HU03 & 8 & 8 & Muy alta & Muy alta \\
+        HU04 & 5 & 5 & Alta & Alta \\
+        HU05 & 8 & 2 & Muy alta & Baja \\
+        HU06 & 3 & 2 & Media & Baja \\
+        HU07 & 5 & 3 & Alta & Media \\
+        HU08 & 2 & 2 & Baja & Baja \\
+        \hline
+    \end{tabular}
+    \label{tab:prioridad_complejidad_hu}
+\end{table}
+
+Las tareas específicas para cada historia, junto con su estimación horaria y tipo de actividad, se encuentran detalladas en el \textbf{Anexo \ref{tab:BL_Totales}} (Detalle de planificación).
+
+% Backlog HU01 (MOVED TO APPENDIX)
+
+
+% Backlog HU02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Arquitectura del sistema}
+
+Para el desarrollo del middleware se optó por un modelo de arquitectura de cuatro capas basado en componentes, diseñado para garantizar la escalabilidad y la separación de preocupaciones. La Figura~\ref{C2.arquitectura_detailed} ilustra la interacción entre los módulos principales.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../02Figures/02Chapter/C2.arquitectura_detailed.png}
+    \caption{Diagrama de contenedores de la solución (Middleware SQL-NoSQL)}
+    \label{C2.arquitectura_detailed}
+\end{figure}
+
+El sistema no opera como una simple pasarela, sino que integra lógica de negocio compleja en dos frentes:
+
+\begin{enumerate}
+    \item \textbf{Capa frontend (Next.js):} Implementa un patrón de gestión de estado global (\texttt{GlobalContext}) que desacopla la lógica de visualización de la comunicación API. Los componentes de UI son puramente presentacionales, delegando la orquestación al contexto.
+    \item \textbf{Capa backend (Flask):} Actúa como el núcleo de procesamiento. El \texttt{ConsultaController} valida la entrada y la redirige al \texttt{SQL Parser}, el cual descompone la sentencia en un Árbol de Sintaxis Abstracta (AST) simplificado. El motor de traducción interpreta este árbol y decide la estrategia de acceso óptima para Firebase (lectura directa o filtrado en memoria).
+\end{enumerate}
+
+Esta arquitectura permite reemplazar cualquiera de los módulos de persistencia (ej. cambiar Firebase por DynamoDB) sin afectar la lógica de parsing o la interfaz de usuario.
+
+\section{Fase de desarrollo}
+
+La implementación del middleware se reorganizó estratégicamente para abordar primero la complejidad lógica y luego la interfaz de usuario. Este enfoque dividió el trabajo en dos grandes fases: una fase inicial de \textbf{desarrollo backend} (4 sprints) centrada en la robustez del parser y la comunicación con Firebase, seguida de una fase de \textbf{desarrollo frontend} (2 sprints) dedicada a la experiencia de usuario y visualización.
+
+Debido a esta reestructuración operativa, la ejecución de las tareas listadas en el Product backlog se distribuyó de la siguiente manera: las tareas técnicas de backend asociadas a las historias de usuario se abordaron en los primeros cuatro sprints, mientras que las tareas de diseño y frontend se consolidaron en los dos últimos sprints para garantizar una integración fluida sobre un núcleo estable.
+
+\subsection{Sprint 0 - Arquitectura y prototipado}
+
+La iteración inicial (sprint 0) se dedicó a definir la arquitectura del sistema y validar la viabilidad técnica y funcional mediante prototipos.
+
+\subsubsection{Prototipos (Mockups)}
+
+Se utilizaron prototipos de alta fidelidad en Figma para validar el flujo de usuario antes de la implementación. La Figura~\ref{C2.prototipos_ui} muestra el diseño propuesto para el editor SQL y la tabla de resultados, estableciendo la guía visual para el desarrollo frontend posterior.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../02Figures/02Chapter/C2.prototipos_ui.png}
+    \caption{Prototipo de la interfaz de usuario: Editor y Panel de Resultados}
+    \label{C2.prototipos_ui}
+\end{figure}
+
+
+
+\subsection{Sprint 1 - Entrada y ejecución básica}
+
+Este primer sprint estableció las bases del proyecto: configuración de Flask, conexión con Firebase y desarrollo de un flujo básico de consulta-respuesta.
+
+\subsubsection{Sprint planning - Sprint 1}
+
+El objetivo fue tener un endpoint funcional que recibiera SQL, lo parseara mínimamente y devolviera una respuesta estructurada. Se abordaron HU01 y HU02.
+
+\paragraph{Planificación:}
+Se priorizaron historias de complejidad alta para mitigar riesgos técnicos desde el inicio. Los criterios de aceptación incluían soporte para sentencias básicas (SELECT, INSERT, DELETE), validación sintáctica y un endpoint REST con respuesta JSON. Las tareas técnicas abarcaron la configuración de Flask, integración de \texttt{sqlparse} y establecimiento de la conexión con Firebase.
+
+\subsubsection{Desarrollo - Sprint 1}
+
+Se implementó una arquitectura modular en Flask para facilitar la mantenibilidad. La estructura del proyecto separa claramente las responsabilidades: \texttt{app.py} como punto de entrada, \texttt{routes.py} para definiciones API, controladores para orquestación y servicios para la lógica de traducción.
+
+\paragraph{Implementación del endpoint:}
+Se registró la ruta \texttt{/consulta} delegando el procesamiento al controlador correspondiente:
+
+\begin{lstlisting}[language=Python, caption={Configuración de rutas en Flask}]
+from flask import Blueprint
+from controllers.consulta_controller import procesar_consulta
+
+consultas_bp = Blueprint('consultas', __name__)
+
+@consultas_bp.route('/consulta', methods=['POST'])
+def consulta_route():
+    return procesar_consulta()
+\end{lstlisting}
+
+El punto de entrada de la aplicación (\texttt{app.py}) inicializa Flask y registra el blueprint:
+
+\begin{lstlisting}[language=Python, caption={Inicialización de la aplicación Flask}]
+from flask import Flask
+from routes import consultas_bp
+
+app = Flask(__name__)
+app.register_blueprint(consultas_bp)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+\end{lstlisting}
+
+\paragraph{Controlador de consultas:}
+
+El controlador (\texttt{consulta\_controller.py}) recibe las peticiones HTTP, extrae el payload JSON y coordina la ejecución:
+
+\begin{lstlisting}[language=Python, caption={Controlador de procesamiento de consultas}]
+from flask import request, jsonify
+from services.traductor_service import traducir_y_ejecutar
+
+def procesar_consulta():
+    try:
+        data = request.get_json()
+        if "sql" in data:
+            original = data["sql"]
+            resultado = traducir_y_ejecutar(original)
+            return jsonify({
+                "original": original,
+                "resultado": resultado
+            })
+        else:
+            return jsonify({"error": "Debes enviar 'sql'"}), 400
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+\end{lstlisting}
+
+\paragraph{Cliente de Firebase:}
+
+Para la comunicación con Firebase Realtime Database, se implementó un cliente que abstrae las operaciones CRUD básicas:
+
+\begin{lstlisting}[language=Python, caption={Cliente de Firebase Realtime Database (Resumido)}]
+import firebase_admin
+from firebase_admin import credentials, db
+
+# Inicializacion de Firebase
+cred = credentials.Certificate('credenciales-firebase.json')
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://middleware-kv-default-rtdb.europe-west1.firebasedatabase.app/'
+})
+
+# Las operaciones CRUD (set_usuario, get_usuario, etc.) se abstraen en funciones.
+# Ver implementacion completa en el repositorio anexo.
+def get_todos(tabla):
+    ref = db.reference(tabla)
+    return ref.get() or {}
+\end{lstlisting}
+
+\paragraph{Validación sintáctica inicial:}
+
+Se integró la biblioteca \texttt{sqlparse} para identificar el tipo de sentencia SQL y se creó un módulo de utilidades (\texttt{utils/parser\_sql.py}) donde residirá la lógica de análisis avanzada. En esta etapa inicial, se validó únicamente la identificación del comando principal:
+
+\begin{lstlisting}[language=Python, caption={Análisis sintáctico básico con sqlparse}]
+import sqlparse
+from utils.parser_sql import _normalizar_sql
+
+def traducir_sql_a_kv(sql):
+    # Paso 1: Normalizacion basica de espacios y alias
+    sql = _normalizar_sql(sql)
+    
+    # Paso 2: Parsing con sqlparse
+    parsed = sqlparse.parse(sql)[0]
+    tipo = parsed.get_type()
+    
+    if tipo in ["SELECT", "INSERT", "DELETE", "UPDATE"]:
+        return tipo
+    else:
+        raise ValueError("Tipo de consulta no soportado")
+\end{lstlisting}
+
+\subsubsection{Resultados y retrospectiva - Sprint 1}
+
+Al cierre del sprint, el endpoint \texttt{/consulta} respondía correctamente: recibía SQL, identificaba el tipo de sentencia (SELECT, INSERT, DELETE) y devolvía un JSON estructurado.
+
+\paragraph{Retrospectiva:}
+Flask demostró ser un framework ligero y de rápida configuración. Firebase también se integró sin dificultades mayores. Sin embargo, se identificó que \texttt{sqlparse} por sí solo no sería suficiente para consultas complejas: operadores como \texttt{LIKE} o condiciones múltiples requerirían expresiones regulares complementarias. Esta tarea quedó programada para el siguiente sprint.
+
+\subsection{Sprint 2 - Traducción SQL a NoSQL y manejo de errores}
+
+Con la infraestructura establecida, el enfoque se centró en construir el motor de traducción que convierte SQL a operaciones comprensibles por Firebase.
+
+\subsubsection{Planificación}
+
+El objetivo fue implementar la lógica de traducción (HU03) y el manejo de errores (HU04). Se buscó que las consultas SELECT funcionaran con filtros simples y que, ante fallos, el usuario recibiera mensajes descriptivos en lugar de trazas de error técnicas.
+
+\subsubsection{Desarrollo - Sprint 2}
+
+Dada la estructura JSON de Firebase, se diseñó una estrategia de traducción que mapea consultas SQL a tres patrones de acceso: \textbf{GET} (acceso directo por ID), \textbf{GET\_ALL} (barrido completo) y \textbf{GET\_FILTER} (filtrado lógico).
+
+\paragraph{Normalización y parsing avanzado:}
+Para abordar la complejidad de las consultas SQL y las variaciones en el espaciado o uso de alias, se implementó una fase de pre-procesamiento. La función \texttt{\_normalizar\_sql} estandariza la entrada antes de aplicar expresiones regulares:
+
+\begin{lstlisting}[language=Python, caption={Normalización de consultas SQL}]
+def _normalizar_sql(sql):
+    # 1. Normalizar whitespace
+    sql = re.sub(r'\s+', ' ', sql).strip()
+    # 2. Eliminar alias de tabla (FROM users u -> FROM users)
+    sql = re.sub(r'\bFROM\s+(\w+)\s+(?:AS\s+)?(?!(?:WHERE|ORDER)...)(\w+)\b', 
+                 r'FROM \1', sql, flags=re.IGNORECASE)
+    return sql
+\end{lstlisting}
+
+Para sistematizar la detección de patrones, se definieron las siguientes expresiones regulares clave que permiten identificar la intención de la consulta antes del parsing profundo:
+
+\begin{table}[H]
+    \centering
+    \caption{Patrones de expresiones regulares utilizados}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Propósito} & \textbf{Expresión regular (Regex)} & \textbf{Ejemplo de captura} \\
+        \hline
+        Comando SELECT & \texttt{r'SELECT\textbackslash s+(.*?)\textbackslash s+FROM'} & Columnas a seleccionar (\texttt{id, nombre}) \\
+        \hline
+        Cláusula WHERE & \texttt{r'WHERE\textbackslash s+(.+)'} & Condición completa (\texttt{edad > 18}) \\
+        \hline
+        Normalización FROM & \texttt{r'\textbackslash bFROM\textbackslash s+(\textbackslash w+)\textbackslash s+(?:AS\textbackslash s+)?(\textbackslash w+)\textbackslash b'} & Eliminación de alias (\texttt{u}) en tabla \\
+        \hline
+        Detección INSERT & \texttt{r'INSERT\textbackslash s+INTO\textbackslash s+(\textbackslash w+)'} & Tabla destino (\texttt{usuarios}) \\
+        \hline
+    \end{tabular}%
+    }
+    \label{tab:regex_patterns}
+\end{table}
+
+Posteriormente, la función \texttt{traducir\_sql\_a\_kv} utiliza una combinación de \texttt{sqlparse} y expresiones regulares para extraer la semántica de la consulta. Se implementó soporte para condiciones múltiples (AND/OR) y operadores avanzados como LIKE/ILIKE:
+
+\begin{lstlisting}[language=Python, caption={Parser SQL con soporte de expresiones regulares}]
+def traducir_sql_a_kv(sql):
+    sql = _normalizar_sql(sql)
+    # ... logica de sqlparse ...
+    
+    if tipo == "SELECT":
+        # Deteccion de WHERE con multiples condiciones (AND/OR)
+        if re.search(r"\s+WHERE\s+.+\s+(AND|OR)\s+", sql, re.IGNORECASE):
+            filtro = _parsear_where_multiple(where_clause)
+            return ("GET_FILTER_MULTIPLE", tabla, filtro, columnas)
+
+        # SELECT simple con expresiones regulares
+        match_where = re.match(r"SELECT\s+(.*?)\s+FROM\s+(\w+)\s+WHERE\s+(.+)", sql)
+        if match_where:
+            # Extraccion de campos y operadores (incluyendo LIKE/ILIKE)
+            cond = _parsear_condicion(where_clause)
+            return ("GET_FILTER", tabla, cond, columnas)
+            
+        # ... manejo de GET por ID y GET_ALL ...
+\end{lstlisting}
+
+\paragraph{Soporte para modificaciones (INSERT/UPDATE/DELETE):}
+El parser se extendió para soportar las operaciones de escritura, incluyendo la capacidad de procesar inserciones masivas (Batch Insert):
+
+\begin{lstlisting}[language=Python, caption={Parser para operaciones de escritura}]
+elif tipo == "INSERT":
+    # Deteccion de INSERT masivo: VALUES (...), (...), ...
+    if match_batch:
+        return ("SET_BATCH", tabla, batch_data)
+    # INSERT simple
+    return ("SET", tabla, id_val, payload)
+
+elif tipo == "UPDATE":
+    # Soporte para UPDATE con WHERE complejo
+    if filtro_multiple:
+        return ("UPDATE_FILTER_MULTIPLE", tabla, payload, filtro)
+    return ("UPDATE", tabla, id_val, payload)
+
+elif tipo == "DELETE":
+    return ("DEL", tabla, id_val)
+\end{lstlisting}
+
+\paragraph{Manejo de errores descriptivos:}
+
+Se implementó manejo de excepciones con mensajes claros que indican la parte problemática de la consulta:
+
+\begin{lstlisting}[language=Python, caption={Manejo de errores en el controlador}]
+def procesar_consulta():
+    try:
+        data = request.get_json()
+        if "sql" in data:
+            original = data["sql"]
+            interna = traducir_sql_a_kv(original)
+            traducida = convertir_a_nosql(interna)
+            resultado = traducir_y_ejecutar(original)
+            
+            return jsonify({
+                "original": original,
+                "traducida": traducida,
+                "resultado": resultado
+            })
+    except ValueError as ve:
+        return jsonify({"error": str(ve)}), 400
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+\end{lstlisting}
+
+\subsubsection{Resultados y retrospectiva - Sprint 2}
+
+Se validó la traducción de consultas SELECT con diversos filtros y operadores (Tabla \ref{tab:ejemplos_traduccion}), logrando generar representaciones NoSQL comprensibles.
+
+\begin{table}[H]
+    \centering
+    \caption{Ejemplos de traducción SQL a NoSQL validados}
+    \begin{tabular}{|p{0.45\textwidth}|p{0.50\textwidth}|}
+        \hline
+        \textbf{Consulta SQL Original} & \textbf{Traducción NoSQL Generada} \\
+        \hline
+        \texttt{SELECT * FROM usuarios WHERE id = 101} & \texttt{GET} sobre tabla usuarios con id 101 \\
+        \hline
+        \texttt{SELECT nombre, edad FROM usuarios WHERE edad \textgreater= 18} & \texttt{GET\_FILTER} sobre tabla usuarios filtrando edad mayor o igual a 18, proyectando columnas nombre y edad \\
+        \hline
+        \texttt{SELECT * FROM usuarios} & \texttt{GET\_ALL} sobre tabla usuarios sin filtros \\
+        \hline
+    \end{tabular}
+    \label{tab:ejemplos_traduccion}
+\end{table}
+
+\paragraph{Retrospectiva:}
+La fase de normalización resultó ser una decisión técnica acertada: simplificó considerablemente las expresiones regulares posteriores. Además, se logró cubrir un espectro amplio de la sintaxis SQL (filtros múltiples, búsquedas con LIKE/ILIKE), superando las limitaciones iniciales de \texttt{sqlparse}.
+
+\subsection{Sprint 3 - Visualización y comparación de resultados}
+
+\subsubsection{Planificación}
+
+Con el parser funcional, el siguiente paso fue integrarlo con Firebase y retornar datos reales (HU05, HU06). El desafío radicaba en que Firebase no soporta filtros complejos de forma nativa, lo que requirió diseñar una estrategia híbrida.
+
+\subsubsection{Desarrollo - Sprint 3}
+
+Se implementó la función orquestadora \texttt{traducir\_y\_ejecutar}, que coordina el flujo desde la entrada SQL hasta la obtención de datos, incluyendo la lógica de filtrado y proyección.
+
+\paragraph{Orquestación del flujo:}
+ 
+ La Figura~\ref{C2.sequence_parser} ilustra el flujo de la función orquestadora \texttt{traducir\_y\_ejecutar}, que actúa como el núcleo del sistema. El diagrama detalla la interacción entre el parser, el motor de traducción y Firebase, destacando la decisión automática entre una consulta directa por ID o la estrategia de escaneo completo (Scan + Filter) según la complejidad de la sentencia SQL.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=1.0\textwidth]{../02Figures/02Chapter/C2.sequence_parser.png}
+     \caption{Diagrama de Secuencia: Flujo de traducción y ejecución híbrida}
+     \label{C2.sequence_parser}
+ \end{figure}
+
+\paragraph{Estrategia de Ejecución Híbrida:}
+
+Una de las decisiones técnicas más relevantes de esta fase fue la implementación de una estrategia ``Híbrida'' (Fetch \& Filter). Debido a que Firebase Realtime Database tiene capacidades de consulta limitadas (no soporta \texttt{ILIKE} o \texttt{WHERE} con múltiples condiciones AND/OR nativamente), el middleware descarga los datos y aplica el filtrado en Python utilizando la función \texttt{\_evaluar\_condicion}.
+
+\begin{lstlisting}[language=Python, caption={Filtrado en memoria con soporte de Regex}]
+def _evaluar_condicion(registro, campo, operador, valor):
+    v = registro.get(campo)
+    # ... validaciones basicas ...
+    
+    # Soporte para operadores estandar y avanzados (LIKE/ILIKE)
+    if operador == "=": return v == valor
+    elif operador == ">": return v > valor
+    # ...
+    elif operador == "LIKE":
+        regex = _like_to_regex(valor)
+        return bool(re.match(regex, v))
+    elif operador == "ILIKE":
+        regex = _like_to_regex(valor)
+        return bool(re.match(regex, v, re.IGNORECASE))
+        
+    return False
+\end{lstlisting}
+
+Esta función permite que el sistema soporte consultas SQL complejas sobre un motor NoSQL simple, equilibrando funcionalidad y complejidad.
+
+
+
+\subsubsection{Resultados y Retrospectiva - Sprint 3}
+
+Se validó exitosamente la ejecución de consultas con filtros complejos (Patterns, Case Insensitivity), confirmando la viabilidad de la estrategia híbrida para los volúmenes de datos del prototipo. La Figura~\ref{C2.firebase_structure} muestra cómo se estructuran los datos en Firebase tras las operaciones de inserción y modificación.
+
+\begin{figure}[H]
+    \centering
+    \label{C2.firebase_structure}
+    \includegraphics[width=0.85\textwidth]{../02Figures/02Chapter/C2.firebase_structure.png}
+    \caption{Estructura de datos en Firebase Realtime Database (Visualización de Northwind)}
+\end{figure}
+
+
+
+\paragraph{Retrospectiva:}
+La estrategia híbrida funciona correctamente para prototipos y bases de datos de tamaño moderado. Sin embargo, se identificó como limitación su impacto en rendimiento para volúmenes masivos de datos, ya que descargar todos los registros para filtrar en Python no escala adecuadamente. Queda como deuda técnica la implementación de índices secundarios en Firebase o la paginación de resultados.
+
+\subsection{Sprint 4 - Refinamiento y documentación final}
+
+El último sprint de backend se dedicó al refinamiento: mejora de mensajes de error, validación de payloads y documentación del sistema.
+
+\subsubsection{Planificación}
+
+Se abordaron HU07 y HU08, centradas en la robustez y documentación del sistema. Las tareas incluyeron la implementación de códigos HTTP apropiados para cada tipo de error y la elaboración de documentación técnica completa.
+
+\subsubsection{Desarrollo - Sprint 4}
+
+Se implementaron códigos de estado HTTP adecuados y mensajes de error descriptivos para facilitar la depuración por parte del cliente.
+
+\paragraph{Mejoras en el manejo de errores:}
+
+Se refinó el manejo de excepciones con mensajes más descriptivos y códigos HTTP apropiados:
+
+\begin{lstlisting}[language=Python, caption={Manejo de errores mejorado y respuesta enriquecida}]
+ def procesar_consulta():
+     try:
+         data = request.get_json()
+         
+         if not data:
+             return jsonify({"error": "Payload JSON vacio"}), 400
+         
+         if "sql" in data:
+             original = data["sql"]
+             
+             if not original or not original.strip():
+                 return jsonify({"error": "Consulta SQL vacia"}), 400
+             
+             interna = traducir_sql_a_kv(original)
+             consulta_parseada = convertir_a_nosql(interna)
+             resultado = traducir_y_ejecutar(original)
+             firebase_queries = generar_firebase_queries(consulta_parseada)
+             
+             return jsonify({
+                 "original": original,
+                 "consulta_parseada": consulta_parseada,
+                 "firebase_queries": firebase_queries,
+                 "resultado": resultado
+             })
+         else:
+             return jsonify({"error": "Debes enviar la clave 'sql'"}), 400
+     
+     except ValueError as ve:
+         # Errores de validacion o parse
+         return jsonify({"error": f"Error de validacion: {str(ve)}"}), 400
+     
+     except Exception as e:
+         # Errores inesperados
+         import traceback
+         traceback.print_exc()
+         return jsonify({"error": f"Error interno: {str(e)}"}), 500
+ \end{lstlisting}
+
+\paragraph{Generación de snippets de código:}
+ 
+ Una característica clave añadida en esta fase fue la capacidad de generar, junto con la respuesta de datos, los fragmentos de código (\textit{snippets}) equivalentes en JavaScript y Python nativo de Firebase.
+ 
+ \begin{lstlisting}[language=Python, caption={Lógica para generar snippets nativos (Resumido)}]
+ def generar_firebase_queries(nosql):
+     op = nosql.get("operacion")
+     
+     if op == "GET_FILTER":
+         # ... Logica condicional ...
+         if operador == "=":
+             js = f"firebase.database().ref('{tabla}').orderByChild('{campo}').equalTo('{valor}').once('value');"
+         elif operador == "LIKE":
+             js = f"// Firebase no soporta LIKE. Filtrar en cliente: ..."
+     
+     return { "javascript": js, "python": py_code }
+ \end{lstlisting}
+ 
+ Esta funcionalidad transforma la herramienta en un recurso educativo. Más allá de solo mostrar datos o confirmar una operación (ej. ``1 registro actualizado''), los snippets explican el \textbf{por qué} de la estrategia utilizada, indicando explícitamente cuando una consulta requiere procesamiento en memoria (Híbrida) por las limitaciones nativas de Firebase.
+ 
+ Esta estructura asegura que el cliente reciba retroalimentación precisa. La Tabla~\ref{tab:error_handling} resume la estrategia de códigos de estado implementada:
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de manejo de errores y códigos HTTP}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|c|p{0.5\textwidth}|}
+        \hline
+        \textbf{Escenario de error} & \textbf{Código HTTP} & \textbf{Acción del sistema} \\
+        \hline
+        Consulta vacía o nula & 400 Bad Request & Rechazo inmediato, no invoca al parser. \\
+        \hline
+        Sintaxis SQL inválida & 400 Bad Request & Devuelve el error específico de \texttt{sqlparse}. \\
+        \hline
+        Tabla no encontrada & 404 Not Found & El servicio de traducción indica entidad inexistente. \\
+        \hline
+        Error de conexión BD & 503 Service Unavailable & Fallo al conectar con Firebase (timeout/auth). \\
+        \hline
+        Excepción no controlada & 500 Internal Error & Captura genérica (traceback) en log. \\
+        \hline
+    \end{tabular}%
+    }
+    \label{tab:error_handling}
+\end{table}
+
+\paragraph{Validación de datos en Firebase:}
+
+Se agregó validación en las operaciones de escritura:
+
+\begin{lstlisting}[language=Python, caption={Validación en operaciones de base de datos}]
+def set_usuario(id, data):
+    if not data:
+        raise ValueError("El diccionario de actualizacion esta vacio.")
+    ref = db.reference(f'usuarios/{id}')
+    ref.update(data)
+\end{lstlisting}
+
+\paragraph{Documentación técnica:}
+
+Se creó documentación completa en el archivo \texttt{README.md}:
+
+\begin{lstlisting}[caption={Extracto de README.md actualizado}]
+# SQL to NoSQL Translator Middleware
+
+Este proyecto implementa un middleware capaz de traducir sentencias 
+SQL (SELECT, INSERT, UPDATE, DELETE) a operaciones CRUD de 
+Firebase Realtime Database, utilizando una estrategia hibrida.
+
+## Tecnologias
+- **Backend:** Python + Flask (API REST)
+- **Frontend:** Next.js 16 + TailwindCSS 4
+- **Base de Datos:** Firebase Realtime Database
+
+## Instalacion y Despliegue
+
+1. **Clonar el repositorio**
+   git clone https://github.com/sebas-sanchez/sql-nosql-tic.git
+
+2. **Backend (Python)**
+   cd backend
+   pip install -r requirements.txt
+   python app.py
+
+3. **Frontend (Node.js)**
+   cd frontend
+   npm install
+   npm run dev
+
+## Uso
+El sistema estara disponible en http://localhost:3000.
+Puedes ejecutar consultas SQL directamente desde la interfaz web.
+\end{lstlisting}
+
+\paragraph{Organización del código:}
+
+Se verificó que la estructura modular esté correctamente implementada:
+
+\begin{itemize}
+    \item Separación clara de responsabilidades por capas.
+    \item Nombres de funciones descriptivos y consistentes.
+    \item Comentarios explicativos en secciones complejas.
+    \item Constantes y configuración separadas del código.
+\end{itemize}
+
+\subsubsection{Resultados y retrospectiva - Sprint 4}
+
+El middleware alcanzó un estado funcional completo, con soporte para las operaciones CRUD básicas y una documentación técnica detallada en el repositorio.
+
+\paragraph{Retrospectiva:}
+El enfoque modular demostró sus beneficios: añadir validaciones o nuevos tipos de error resultó sencillo gracias a la separación de responsabilidades. El middleware quedó preparado para la integración con el frontend, lo cual constituyó el siguiente paso del desarrollo.
+
+\subsection{Sprint 5 - Arquitectura frontend e interfaz de usuario}
+
+\subsubsection{Planificación}
+
+Con el backend estable, se procedió a desarrollar la interfaz de usuario. Se seleccionó \textbf{Next.js 16} por su capacidad de renderizado híbrido (SSR/CSR), y \textbf{Tailwind CSS 4} para agilizar el proceso de estilizado. El objetivo del sprint fue construir la estructura visual del editor y los paneles de resultados.
+
+\subsubsection{Desarrollo - Sprint 5}
+
+Se inicializó el proyecto frontend dentro del repositorio monolítico, estableciendo una estructura de directorios orientada a componentes:
+
+\begin{itemize}
+    \item \texttt{src/app}: Rutas y paginas del sistema (App Router).
+    \item \texttt{src/components}: Componentes de UI reutilizables y modulares.
+    \item \texttt{src/services}: Capa de abstracción para comunicación API.
+    \item \texttt{src/context}: Manejo de estado global (React Context).
+\end{itemize}
+
+\paragraph{Diseño modular de componentes:}
+
+Se implementó la interfaz dividiéndola en paneles funcionales independientes para facilitar el mantenimiento y la pruebas:
+
+\begin{table}[H]
+    \centering
+    \caption{Catálogo de componentes principales de la interfaz}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|p{0.5\textwidth}|}
+        \hline
+        \textbf{Componente} & \textbf{Responsabilidad} & \textbf{Características clave} \\
+        \hline
+        \texttt{SQLInputPanel} & Editor de consultas & Resaltado sintáctico, numeración de líneas y validación básica de entrada (HU01). \\
+        \hline
+        \texttt{NoSQLOutputPanel} & Visor de traducción & Integra pestañas para visualizar el JSON parseado y los \textit{snippets} de código (JS/Python) generados. \\
+        \hline
+        \texttt{QueryResultPanel} & Tabla de resultados & Renderizado dinámico de filas/columnas basado en la respuesta de Firebase (HU05). \\
+        \hline
+        \texttt{Console} & Logs y errores & Panel interactivo con filtros por tipo (Info/Error) y controles de expansión/minimización. \\
+        \hline
+    \end{tabular}%
+    }
+    \label{tab:component_catalog}
+\end{table}
+
+\begin{lstlisting}[language=Java, caption={Estructura del componente SQLInputPanel (Simplificado)}]
+// src/components/SQLInputPanel.tsx
+export default function SQLInputPanel({ value, onChange, onExecute }) {
+  return (
+    <div className="flex flex-col h-full border rounded-lg bg-gray-900 border-gray-700">
+      <div className="flex justify-between items-center p-2 bg-gray-800 border-b border-gray-700">
+        <span className="text-sm font-semibold text-gray-200">Editor SQL</span>
+        <button 
+           onClick={onExecute}
+           className="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-xs text-white">
+           Ejecutar
+        </button>
+      </div>
+      <textarea
+        className="flex-1 w-full bg-transparent p-4 text-sm font-mono text-gray-300 resize-none focus:outline-none"
+        placeholder="Escribe tu consulta SQL aqui..."
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
+    </div>
+  );
+}
+\end{lstlisting}
+
+\paragraph{Estilizado con Tailwind CSS:}
+
+Se definió un tema oscuro por defecto para reducir la fatiga visual durante sesiones prolongadas de uso. Tailwind CSS permitió mantener consistencia en colores, bordes y tipografía de forma eficiente.
+
+\subsubsection{Resultados y retrospectiva - Sprint 5}
+
+Al cierre del sprint, la maquetación estaba completa. Los componentes respondían correctamente a distintas resoluciones y la estructura modular facilitaba modificaciones sin afectar otras partes del sistema.
+
+\paragraph{Retrospectiva:}
+Tailwind CSS aceleró significativamente el proceso de estilizado. El siguiente desafío fue conectar estos componentes con el backend, lo cual requería centralizar el estado de la aplicación. React Context se identificó como la opción más directa para evitar la propagación de props a través de múltiples niveles.
+\subsection{Sprint 6 - Lógica de integración y gestión de estado}
+
+\subsubsection{Planificación}
+
+El sprint final (HU08 y cierre de historias previas) se dedicó a la integración del frontend con el backend. El objetivo fue implementar la comunicación entre capas, gestionar estados de carga y errores, y lograr que el usuario visualice resultados actualizados sin necesidad de recargar la página.
+
+\subsubsection{Desarrollo - Sprint 6}
+
+Se implementó un patrón de gestión de estado centralizado utilizando \textbf{React Context API}. Esto permitió desacoplar la lógica de negocio de los componentes visuales.
+
+\paragraph{Contexto Global (Store):}
+
+El \texttt{GlobalContext} actúa como el cerebro del frontend, manteniendo el estado de:
+\begin{itemize}
+    \item \texttt{sqlCommand}: La consulta escrita por el usuario.
+    \item \texttt{queryResult}: La respuesta procesada del backend (tabla).
+    \item \texttt{translationResult}: La traducción NoSQL JSON.
+    \item \texttt{isLoading}: Bandera para controlar spinners y deshabilitar botones.
+    \item \texttt{error}: Objeto para capturar y mostrar excepciones.
+\end{itemize}
+
+\begin{lstlisting}[language=Java, caption={Lógica de Integración en el Componente Principal}]
+ // src/app/page.tsx (Resumido)
+ const handleTranslate = async () => {
+     if (!sqlInput.trim()) return addLog("ERROR", "Consulta vacia");
+     
+     setIsLoading(true);
+     try {
+         // Paso 1: Llamada al Backend
+         const response = await translateSQL(sqlInput);
+         
+         // Paso 2: Actualización de Estado Visual
+         setNosqlOutput(JSON.stringify(response.consulta_parseada, null, 2));
+         setFirebaseQueries(response.firebase_queries);
+         setQueryResult(response.resultado);
+         
+         // Paso 3: Logging
+         addLog("SUCCESS", "SQL traducido exitosamente");
+         
+     } catch (error) {
+         addLog("ERROR", error.message);
+         setQueryResult(null);
+     } finally {
+         setIsLoading(false);
+     }
+ };
+ \end{lstlisting}
+
+\paragraph{Retroalimentación Visual (HU08):}
+
+Gracias a la bandera \texttt{isLoading}, se implementaron indicadores visuales inmediatos. El botón ``Ejecutar'' muestra un estado ``Procesando...'' y se bloquea para evitar reenvíos dobles, mientras que el panel de consola se despliega automáticamente en caso de error.
+
+\paragraph{Manejo de CORS:}
+Para permitir la comunicación entre el frontend (Next.js en puerto 3000) y el backend (Flask en puerto 5000), se configuró \texttt{flask-cors} en el servidor, habilitando el intercambio de recursos de origen cruzado de manera segura para el entorno de desarrollo.
+
+\subsubsection{Resultados y retrospectiva - Sprint 6}
+
+Con la integración completada, se realizaron pruebas de sistema ejecutando el flujo completo:
+1. Ingreso de consulta SQL (SELECT, INSERT, DELETE).
+2. Visualización de la traducción automática a NoSQL.
+3. Confirmación de cambios en Firebase Realtime Database.
+4. Recepción de errores controlados ante sintaxis inválida.
+
+\paragraph{Retrospectiva:}
+La separación de la lógica en el Context facilitó la depuración, ya que el estado podía inspeccionarse en un solo lugar en lugar de rastrearlo a través de múltiples componentes. El sistema final cumple con los requisitos establecidos: traducir SQL, ejecutar operaciones en Firebase y mostrar resultados sin requerir que el usuario aprenda un lenguaje de consulta diferente.

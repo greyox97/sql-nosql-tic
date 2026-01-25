@@ -1,0 +1,48 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {xchapter}{INTRODUCCIÓN}{1}{chapter.1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{METODOLOGÍA}{7}{chapter.2}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Roles de Scrum aplicados al proyecto}}{8}{table.caption.10}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Artefactos de Scrum en el proyecto}}{9}{table.caption.11}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Eventos de Scrum aplicados}}{10}{table.caption.12}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Stakeholders del proyecto}}{11}{table.caption.13}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces HU01 --- Ingresar una consulta SQL}}{13}{table.caption.14}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces HU02 --- Ejecutar la consulta SQL}}{14}{table.caption.15}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces HU03 --- Ver la traducci\'on generada de la consulta}}{15}{table.caption.16}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces HU04 --- Identificar errores en la traducci\'on}}{16}{table.caption.17}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces HU05 --- Visualizar resultados de la ejecuci\'on}}{17}{table.caption.18}%
+\contentsline {table}{\numberline {2.10}{\ignorespaces HU06 --- Ver la consulta original y la traducci\'on simult\'aneamente}}{18}{table.caption.19}%
+\contentsline {table}{\numberline {2.11}{\ignorespaces HU07 --- Interfaz intuitiva y ordenada}}{18}{table.caption.20}%
+\contentsline {table}{\numberline {2.12}{\ignorespaces HU08 --- Recibir retroalimentaci\'on visual durante la ejecuci\'on}}{19}{table.caption.21}%
+\contentsline {table}{\numberline {2.13}{\ignorespaces Valoración de prioridad}}{20}{table.caption.22}%
+\contentsline {table}{\numberline {2.14}{\ignorespaces Valoración de complejidad}}{20}{table.caption.23}%
+\contentsline {table}{\numberline {2.15}{\ignorespaces Stack tecnológico seleccionado}}{21}{table.caption.24}%
+\contentsline {table}{\numberline {2.16}{\ignorespaces Valoración de prioridad y complejidad de historias de usuario}}{22}{table.caption.25}%
+\contentsline {table}{\numberline {2.17}{\ignorespaces Patrones de expresiones regulares utilizados}}{29}{table.caption.28}%
+\contentsline {table}{\numberline {2.18}{\ignorespaces Ejemplos de traducción SQL a NoSQL validados}}{32}{table.caption.29}%
+\contentsline {table}{\numberline {2.19}{\ignorespaces Matriz de manejo de errores y códigos HTTP}}{37}{table.caption.32}%
+\contentsline {table}{\numberline {2.20}{\ignorespaces Catálogo de componentes principales de la interfaz}}{40}{table.caption.33}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{RESULTADOS, CONCLUSIONES Y RECOMENDACIONES}{44}{chapter.3}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Matriz de Severidad de Usabilidad}}{62}{table.caption.52}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{REFERENCIAS BIBLIOGRÁFICAS}{65}{chapter.4}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conjunto de datos (Dataset NoSQL)}{68}{appendix.Alph1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Detalle de planificación (Backlog)}{70}{appendix.Alph2}%
+\contentsline {table}{\numberline {II.1}{\ignorespaces Backlog HU01 --- Ingresar una consulta SQL}}{70}{table.caption.53}%
+\contentsline {table}{\numberline {II.2}{\ignorespaces Backlog HU02 --- Ejecutar la consulta SQL}}{71}{table.caption.54}%
+\contentsline {table}{\numberline {II.3}{\ignorespaces Backlog HU03 --- Ver la traducci\'on generada de la consulta}}{71}{table.caption.55}%
+\contentsline {table}{\numberline {II.4}{\ignorespaces Backlog HU04 --- Identificar errores en la traducci\'on}}{71}{table.caption.56}%
+\contentsline {table}{\numberline {II.5}{\ignorespaces Backlog HU05 --- Visualizar resultados de la ejecuci\'on}}{72}{table.caption.57}%
+\contentsline {table}{\numberline {II.6}{\ignorespaces Backlog HU06 --- Ver consulta original y traducci\'on simult\'aneamente}}{72}{table.caption.58}%
+\contentsline {table}{\numberline {II.7}{\ignorespaces Backlog HU07 --- Interfaz intuitiva y ordenada}}{72}{table.caption.59}%
+\contentsline {table}{\numberline {II.8}{\ignorespaces Backlog HU08 --- Retroalimentaci\'on visual durante la ejecuci\'on}}{73}{table.caption.60}%
+\contentsline {table}{\numberline {II.9}{\ignorespaces Totales aproximados por categor\'ia}}{73}{table.caption.61}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Guía de instalación y despliegue}{74}{appendix.Alph3}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Enlaces y recursos}{76}{appendix.Alph4}%
+\contentsline {table}{\numberline {IV.1}{\ignorespaces Enlaces a repositorios y recursos}}{76}{table.caption.62}%

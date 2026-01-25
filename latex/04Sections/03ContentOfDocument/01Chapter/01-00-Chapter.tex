@@ -1,0 +1,43 @@
+En los últimos años, el crecimiento exponencial de los datos, impulsado por la digitalización de procesos y la expansión de servicios en línea, ha planteado nuevos retos en el ámbito del almacenamiento, recuperación y gestión de información. Frente a este escenario, las bases de datos tradicionales del tipo relacional, o SQL, han demostrado ciertas limitaciones en cuanto a escalabilidad, flexibilidad y rendimiento cuando se trata de manejar grandes volúmenes de datos. Como respuesta, surgieron las bases de datos NoSQL, las cuales ofrecen una alternativa viable y eficiente para aplicaciones distribuidas y con altos requerimientos de rendimiento, especialmente en entornos orientados al Big Data, la analítica en tiempo real y la web semántica.
+
+Las bases de datos NoSQL se caracterizan por su capacidad para escalar horizontalmente, su modelo flexible de datos, y su especialización en tipos particulares de almacenamiento como clave-valor, documentos, grafos, columnas anchas, etc. Ahora bien, tanta variedad tiene su lado negativo, resulta difícil adoptar estas tecnologías cuando las aplicaciones existentes dependen por completo de SQL para consultar, manipular y definir datos.
+
+El problema de fondo está en que SQL y NoSQL hablan idiomas distintos. SQL es un lenguaje declarativo, maduro y con décadas de estandarización detrás, en cambio, cada sistema NoSQL trae consigo su propia sintaxis y manera de operar. Para un desarrollador acostumbrado a escribir JOINs y WHERE, enfrentarse a APIs propietarias supone una curva de aprendizaje considerable. Y si hablamos de migrar un sistema legado o de hacer que dos bases de datos colaboren, los dolores de cabeza se multiplican.
+
+Han surgido alternativas: motores de federación, extensiones de SQL pensadas para NoSQL, bases multi-modelo. Pero ninguna resuelve del todo la necesidad de poder escribir consultas SQL y que estas se ejecuten, sin más, sobre un almacén clave-valor. Un middleware que haga esa traducción de forma transparente sigue siendo una pieza que falta en el rompecabezas.
+
+Precisamente eso es lo que propone este proyecto: construir una capa intermedia que reciba sentencias SQL estándar y las convierta, sobre la marcha, en operaciones compatibles con bases de datos NoSQL de tipo clave-valor. El usuario final escribe su consulta como siempre, por debajo, el sistema se encarga de la transformación semántica y sintáctica necesaria.
+
+Para lograrlo se construyó un parser SQL a medida que descompone cada consulta en piezas manejables, conectores específicos para la base NoSQL elegida, y una interfaz donde el usuario puede escribir su sentencia y ver los resultados sin tener que aprender un lenguaje nuevo.
+
+Más allá de lo técnico, la ventaja es clara: se aprovecha todo el conocimiento acumulado en SQL, que no es poco, dentro de escenarios modernos y escalables, reduciendo tiempos de desarrollo y facilitando la convivencia entre sistemas heterogéneos.
+
+En síntesis, lo que se presenta es un puente entre dos formas de concebir la persistencia de datos. La tesis documenta desde la concepción inicial hasta las pruebas finales, incluyendo los desafíos técnicos encontrados y los ajustes realizados durante el diseño. El trabajo se fundamenta en conceptos de ingeniería de software, teoría de lenguajes de consulta y arquitectura orientada a servicios, aplicados a un proyecto que se desarrolló de forma iterativa mediante sprints.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------- Section 1 ---------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivo general}
+\label{chapter01-section01:Objetivo General}
+\input{../04Sections/03ContentOfDocument/01Chapter/01-01-Section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------- Section 2 ---------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos específicos}
+\label{chapter01-section02:Objetivos Específicos}
+\input{../04Sections/03ContentOfDocument/01Chapter/01-02-Section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------- Section 3 ---------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Alcance}
+\label{chapter01-section03:Alcance}
+\input{../04Sections/03ContentOfDocument/01Chapter/01-03-Section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------- Section 4 ---------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Marco teórico}
+\label{chapter01-section03:Marco teórico}
+\input{../04Sections/03ContentOfDocument/01Chapter/01-04-Section}

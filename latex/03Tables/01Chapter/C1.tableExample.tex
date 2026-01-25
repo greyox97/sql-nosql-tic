@@ -1,0 +1,16 @@
+%%%---------- Table C1T1. tableExample ----------%%%
+%\input{03Tables/01Chapter/C1T1:tableExample}
+
+\begin{table}[H]
+    \caption{Table Example.\label{C1T1:tableExample}}
+    \newcolumntype{C}{>{\centering\arraybackslash}X}
+        \begin{tabularx}{\textwidth}{CCCC}
+            \toprule
+            \textbf{TITLE 1} & \textbf{TITLE 2}   & \textbf{TITLE 3} & \textbf{TITLE 4}        \\
+            \midrule
+            TEXT 1   & TEXT 2 & TEXT 3 & TEXT 4 \\
+            …        & …     & …    & …     \\  
+            TEXT n   & TEXT n & TEXT n & TEXT N \\
+            \bottomrule
+        \end{tabularx}
+\end{table}

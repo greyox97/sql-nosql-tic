@@ -1,0 +1,13 @@
+A partir de los hallazgos y limitaciones identificadas durante el desarrollo, se proponen las siguientes recomendaciones para trabajos futuros:
+ 
+ \begin{itemize}
+     \item \textbf{Optimización mediante índices:} Para mitigar la latencia en la estrategia híbrida cuando el volumen de datos escala, se recomienda implementar un sistema que sugiera o cree índices automáticamente en Firebase (reglas \texttt{.indexOn}) basados en los campos más consultados en la cláusula \texttt{WHERE}.
+     
+     \item \textbf{Implementación de paginación en el servidor:} Actualmente, las consultas \texttt{SELECT *} recuperan la colección completa. Se sugiere implementar paginación basada en cursor (\texttt{limitToFirst}, \texttt{startAt}) para manejar grandes volúmenes de datos sin saturar la memoria del middleware ni el ancho de banda del cliente.
+     
+     \item \textbf{Seguridad y autenticación:} Integrar Firebase Authentication para gestionar usuarios y roles. Esto permitiría no solo proteger los endpoints, sino también personalizar el acceso a los datos (Row Level Security) utilizando las Reglas de Seguridad de Firebase, traduciendo permisos SQL (GRANT/REVOKE) a reglas JSON.
+     
+     \item \textbf{Soporte multi-motor:} Abstraer la capa de adaptador de base de datos para soportar otros motores NoSQL populares como MongoDB o Amazon DynamoDB. La estructura actual del parser genera un AST agnóstico que podría transpilarse a otros lenguajes de consulta (ej. MQL de Mongo) con cambios mínimos en el núcleo.
+
+    \item \textbf{Refinamiento de usabilidad:} Atendiendo a los hallazgos de la evaluación heurística, se sugiere incorporar una sección de "Ayuda Contextual" (Tooltips) para funciones avanzadas y habilitar atajos de teclado (ej. \texttt{Ctrl+Enter} para ejecutar), mejorando la eficiencia para usuarios expertos.
+ \end{itemize}

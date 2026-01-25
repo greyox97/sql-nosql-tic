@@ -1,0 +1,319 @@
+
+ 
+ Para validar el funcionamiento del middleware se diseñó una batería de pruebas funcionales que abarcan operaciones CRUD, filtrado complejo y manejo de errores. Las pruebas se ejecutaron en el entorno de desarrollo descrito en el Capítulo 2 (Next.js + Flask local, Firebase RTDB en nube).
+ 
+ A continuación se presentan los resultados obtenidos para cada caso de prueba, comparando la sentencia SQL de entrada con la respuesta del sistema y el estado final de la base de datos.
+ 
+ \subsection{Pruebas de inserción de datos}
+ 
+ Se evaluó la capacidad del sistema para crear nuevos registros, tanto individualmente como en lote.
+ 
+ \subsubsection{Caso 1: Inserción simple}
+ \textbf{Objetivo:} Verificar la creación de un único documento con ID personalizado.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Inserción Simple}]
+ INSERT INTO northwind (id, displayName, company, city) VALUES ('test1', 'Usuario Test 1', 'Empresa A', 'Madrid');
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El sistema procesó la solicitud exitosamente, retornando un mensaje de confirmación.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_InsertSimple.png}
+     \caption{Resultado de inserción simple en la interfaz}
+     \label{fig:res_insert_simple}
+ \end{figure}
+ 
+ \subsubsection{Caso 2: Inserción masiva (Batch)}
+ \textbf{Objetivo:} Validar la capacidad de procesar múltiples registros en una sola sentencia (Atomicidad).
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Inserción batch}]
+ INSERT INTO northwind (id, displayName, company, city) VALUES ('test2', 'Usuario Test 2', 'Empresa B', 'Barcelona'), ('test3', 'Usuario Test 3', 'Empresa C', 'Sevilla');
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El parser identificó correctamente los múltiples conjuntos de valores y el adaptador de Firebase ejecutó las escrituras en una operación de actualización multipath (\texttt{update()}).
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_InsertBatch.png}
+     \caption{Confirmación de inserción masiva (2 registros)}
+     \label{fig:res_insert_batch}
+ \end{figure}
+ 
+ \subsection{Pruebas de selección y filtrado}
+ 
+ Se verificó la eficacia del parser para interpretar la cláusula \texttt{WHERE} y seleccionar la estrategia de ejecución adecuada (Directa vs Híbrida).
+ 
+ \subsubsection{Caso 3: Selección total}
+ \textbf{Objetivo:} Recuperar todos los registros de una colección.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Select All}]
+ SELECT * FROM northwind;
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El sistema recuperó la colección completa. La interfaz muestra el conteo total de documentos retornados.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectAll.png}
+     \caption{Visualización de todos los registros}
+     \label{fig:res_select_all}
+ \end{figure}
+ 
+ \subsubsection{Caso 4: Búsqueda por ID}
+ \textbf{Objetivo:} Validar la optimización de acceso directo cuando se filtra por clave primaria.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Select por ID}]
+ SELECT * FROM northwind WHERE id = 'Jacquelyngaines@altonrealty_com';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El middleware detectó el filtro por \texttt{id} y utilizó la función \texttt{child(id).get()} de Firebase, evitando la descarga innecesaria de otros datos.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectID.png}
+     \caption{Recuperación optimizada por ID}
+     \label{fig:res_select_id}
+ \end{figure}
+ 
+ \subsubsection{Caso 5: Proyección de columnas}
+ \textbf{Objetivo:} Verificar que solo se devuelvan los campos solicitados.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Proyección}]
+ SELECT interests FROM northwind WHERE id = 'Jacquelyngaines@altonrealty_com';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} Aunque Firebase devuelve el nodo completo por defecto, el motor de traducción filtró las claves en el backend antes de responder al cliente.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectProjection.png}
+     \caption{Resultado con proyección (Solo campo 'interests')}
+     \label{fig:res_projection}
+ \end{figure}
+ 
+ \subsubsection{Caso 6: Filtrado por rango}
+ \textbf{Objetivo:} Filtrar datos numéricos utilizando operadores de comparación.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Rango numérico}]
+ SELECT * FROM northwind WHERE commonId > 63000;
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} La consulta se ejecutó mediante la estrategia híbrida (Scan + Filter en Python), filtrando correctamente los registros que cumplen la condición.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectGreater.png}
+     \caption{Filtrado numérico (> 63000)}
+     \label{fig:res_range}
+ \end{figure}
+ 
+ \subsubsection{Caso 7: Filtrado por patrones (LIKE)}
+ \textbf{Objetivo:} Validar búsqueda de texto con comodines (Case sensitive).
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Pattern LIKE}]
+ SELECT * FROM northwind WHERE company LIKE 'Empresa%';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El sistema identificó el operador \texttt{LIKE} y convirtió el patrón SQL (\texttt{\%}) a una expresión regular Python equivalente.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectLike.png}
+     \caption{Resultado de filtro por patrón exacto}
+     \label{fig:res_like}
+ \end{figure}
+ 
+ \subsubsection{Caso 8: Patrones insensibles a mayúsculas (ILIKE)}
+ \textbf{Objetivo:} Comprobar la extensibilidad del parser para operadores PostgreSQL (\texttt{ILIKE}).
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Pattern ILIKE}]
+ SELECT * FROM northwind WHERE company ILIKE 'empresa%';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} Se retornaron los mismos registros que en el Caso 7, demostrando que el filtro ignoró las diferencias de capitalización.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectILike.png}
+     \caption{Resultado de filtro Case Insensitive}
+     \label{fig:res_ilike}
+ \end{figure}
+ 
+ \subsubsection{Caso 9: Lógica compuesta (AND)}
+ \textbf{Objetivo:} Evaluar el manejo de múltiples condiciones simultáneas.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Filtro compuesto}]
+ SELECT * FROM northwind WHERE company ILIKE 'empresa%' AND city = 'Madrid';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} La función de filtrado aplicó ambas reglas correctamente, reduciendo el conjunto de resultados a la intersección de las condiciones.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_SelectComplex.png}
+     \caption{Resultado de filtrado compuesto (AND)}
+     \label{fig:res_complex}
+ \end{figure}
+ 
+ \subsection{Pruebas de manipulación de datos}
+ 
+ \subsubsection{Caso 10: Actualización parcial (Batch update)}
+ \textbf{Objetivo:} Modificar campos específicos en múltiples registros simultáneamente.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Update batch}]
+ UPDATE northwind SET city = 'Cuenca', company = 'Empresa X', displayName = 'Cambio test' WHERE company ILIKE 'empresa%';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El sistema identificó los registros a modificar mediante el filtro previo y aplicó los cambios únicamente en los campos especificados, preservando el resto de la información.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Update.png}
+     \caption{Resultado de actualización masiva}
+     \label{fig:res_update}
+ \end{figure}
+ 
+ \subsubsection{Caso 11: Eliminación lógica/física}
+ \textbf{Objetivo:} Eliminar un conjunto de registros basado en condiciones.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Delete Batch}]
+ DELETE FROM northwind WHERE company ILIKE 'empresa%';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} La operación eliminó exitosamente los nodos coincidentes en Firebase.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Delete.png}
+     \caption{Confirmación de eliminación de registros}
+     \label{fig:res_delete}
+ \end{figure}
+ 
+ \subsection{Pruebas de manejo de errores}
+ 
+ \subsubsection{Caso 12: Error de sintaxis}
+ \textbf{Objetivo:} Validar la capacidad de detección de comandos inválidos.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Sintaxis Inválida}]
+ SELEKT * FROM northwind;
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El parser \texttt{sqlparse} falló al reconocer el token inicial, y el middleware retornó un error 400 con un mensaje descriptivo.
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_ErrorSyntax.png}
+     \caption{Error de sintaxis reportado en la interfaz}
+     \label{fig:res_error_syntax}
+ \end{figure}
+ 
+ \subsubsection{Caso 13: Error semántico (Tabla inexistente)}
+ \textbf{Objetivo:} Verificar la validación de existencia de colecciones.
+ 
+ \begin{lstlisting}[language=SQL, caption={Consulta SQL - Tabla No Encontrada}]
+ SELECT displayName, firstName FROM northwind2 WHERE lastName = 'Gaines';
+ \end{lstlisting}
+ 
+ \textbf{Resultado:} El adaptador de Firebase intentó acceder a la referencia \texttt{northwind2}, retornando un conjunto vacío. El sistema manejó esto correctamente indicando "0 documentos encontrados".
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_ErrorSemantic.png}
+     \caption{Manejo de consulta a colección inexistente}
+     \label{fig:res_error_semantic}
+ \end{figure}
+ 
+ \subsection{Pruebas no funcionales: Usabilidad}
+ 
+ Se realizó una \textbf{evaluación heurística} completada aplicando los 10 principios de usabilidad de Jakob Nielsen. Esta metodología permitió inspeccionar la interfaz para identificar problemas de usabilidad y clasificarlos según su severidad en una escala del 0 (Sin problema) al 4 (Catástrofe de usabilidad).
+ 
+ \subsubsection{Resultados de la evaluación heurística}
+ 
+ A continuación se detalla el análisis punto por punto:
+ 
+ \paragraph{H1: Visibilidad del estado del sistema (Severidad: 0)}
+ El sistema proporciona retroalimentación inmediata mediante el indicador de carga ``Procesando...'' en la barra de herramientas y mensajes de estado en la consola (``ACCIÓN'', ``ÉXITO''), manteniendo al usuario informado.
+ 
+ \paragraph{H2: Correspondencia con el mundo real (Severidad: 0)}
+ Se utiliza terminología estándar del dominio (SQL, Colección, JSON, Python), adecuada para el perfil técnico del usuario objetivo.
+ 
+ \paragraph{H3: Control y libertad del usuario (Severidad: 0)}
+ La interfaz permite redimensionar los paneles de salida y minimizar/maximizar la consola a demanda, otorgando control sobre el espacio de trabajo.
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Heuristic_Control.png}
+     \caption{Usuario redimensionando el panel de salida (H3)}
+     \label{fig:h3_control}
+ \end{figure}
+ 
+ \paragraph{H4: Consistencia y estándares (Severidad: 0)}
+ Los colores de sintaxis (azul para keywords, verde para strings), iconos y tipografía se mantienen consistentes en toda la aplicación gracias al sistema de diseño.
+ 
+ \paragraph{H5: Prevención de errores (Severidad: 0)}
+ Se validaron mecanismos preventivos: el sistema bloquea el envío si el campo SQL está vacío o si no hay conexión con el backend, mostrando un mensaje claro antes de generar una excepción.
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Heuristic_Prevention.png}
+     \caption{Bloqueo de ejecución por falta de conexión (H5)}
+     \label{fig:h5_prevention}
+ \end{figure}
+ 
+ \paragraph{H6: Reconocimiento antes que recuerdo (Severidad: 0)}
+ Los snippets generados (Python/JS) están visibles junto al resultado, evitando que el usuario deba recordar la sintaxis de Firebase SDK.
+ 
+ \paragraph{H7: Flexibilidad y eficiencia de uso (Severidad: 1)}
+ Aunque la consola permite filtros rápidos y expansión, la interfaz carece de atajos de teclado (ej. Ctrl+Enter para ejecutar), lo cual es una mejora deseable para usuarios expertos.
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Heuristic_Flexibility.png}
+     \caption{Consola expandida para revisión detallada (H7)}
+     \label{fig:h7_flexibility}
+ \end{figure}
+ 
+ \paragraph{H8: Estética y diseño minimalista (Severidad: 0)}
+ El diseño en modo oscuro reduce la fatiga visual y elimina elementos distractores, centrando la atención en el código.
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Heuristic_UI.png}
+     \caption{Interfaz minimalista en modo oscuro (H8)}
+     \label{fig:h8_aesthetic}
+ \end{figure}
+ 
+ \paragraph{H9: Ayuda a reconocer y recuperar errores (Severidad: 0)}
+ Los mensajes de error de sintaxis son descriptivos e indican el token problemático, facilitando la corrección inmediata.
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.95\textwidth]{../02Figures/03Chapter/R_Heuristic_Error.png}
+     \caption{Mensaje de error descriptivo en consola (H9)}
+     \label{fig:h9_recovery}
+ \end{figure}
+ 
+ \paragraph{H10: Ayuda y documentación (Severidad: 2)}
+ El sistema carece de una sección de ayuda integrada o tooltips explicativos sobre las funcionalidades complejas, lo cual representa un problema de usabilidad menor.
+ 
+ \subsubsection{Reporte de severidad}
+ 
+ La Tabla~\ref{tab:severidad_heuristica} resume los hallazgos. Se observa que la mayoría de los principios se cumplen satisfactoriamente (Severidad 0), existiendo oportunidades de mejora menores en flexibilidad y documentación.
+ 
+ \begin{table}[H]
+     \centering
+     \caption{Matriz de Severidad de Usabilidad}
+     \begin{tabular}{|l|p{0.5\textwidth}|c|}
+         \hline
+         \textbf{Heurística} & \textbf{Observación} & \textbf{Severidad (0-4)} \\
+         \hline
+         H1: Visibilidad & Indicadores de carga y logs claros. & 0 \\
+         H2: Mundo Real & Terminología técnica adecuada. & 0 \\
+         H3: Control & Paneles redimensionables y consola colapsable. & 0 \\
+         H4: Consistencia & Estilos visuales coherentes. & 0 \\
+         H5: Prevención & Validación de entrada y estado de red. & 0 \\
+         H6: Reconocimiento & Snippets de código visibles. & 0 \\
+         H7: Flexibilidad & Falta de atajos de teclado (Ctrl+Enter). & 1 \\
+         H8: Estética & Diseño limpio y modo oscuro. & 0 \\
+         H9: Recuperación & Errores de sintaxis descriptivos. & 0 \\
+         H10: Ayuda & Ausencia de documentación integrada. & 2 \\
+         \hline
+     \end{tabular}
+     \label{tab:severidad_heuristica}
+ \end{table}

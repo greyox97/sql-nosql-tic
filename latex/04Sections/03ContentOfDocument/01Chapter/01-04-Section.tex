@@ -1,0 +1,59 @@
+\subsection{Antecedentes}
+
+La literatura sobre traducción SQL-NoSQL recoge diversos intentos por resolver un problema común: permitir que aplicaciones con dominio de SQL puedan aprovechar las bases NoSQL sin requerir una curva de aprendizaje extensa.
+
+Namdeo y Suman desarrollaron un middleware en Java denominado \textit{SQL-No-QT} que traduce consultas básicas a MongoDB~\cite{namdeo2022middleware}. Las pruebas realizadas contra Studio 3T mostraron tiempos hasta un 78\% mejores. Por su parte, Dede et al.~\cite{dede2019relational} analizaron el proceso de migración de aplicaciones relacionales a NoSQL mediante \textit{wrappers} que encapsulan la lógica de negocio, evitando la reescritura completa del código.
+
+En el ámbito de la automatización, Queiroz et al.~\cite{queiroz2022amanda} presentaron \textit{AMANDA}, un sistema que migra esquemas y datos de SQL a DGraph con una velocidad 26 veces superior a otras herramientas. Murthy et al.~\cite{murthy2021query} propusieron una plataforma unificada que actúa como middleware plurilingüe, traduciendo comandos genéricos al motor NoSQL correspondiente. Finalmente, Mami et al.~\cite{mami2019survey} realizaron un mapeo exhaustivo de más de 40 enfoques distintos, identificando como problemas principales la pérdida de semántica en relaciones anidadas y la ausencia de un lenguaje intermedio estándar.
+
+\subsection{Fundamentos de bases de datos}
+
+Comprender el funcionamiento de las bases relacionales y NoSQL resulta esencial para diseñar un traductor efectivo. A continuación se presenta un repaso de cada paradigma y de los conceptos que influyeron en las decisiones técnicas del proyecto.
+
+\subsubsection{SQL y el modelo relacional}
+
+El modelo relacional constituye el estándar durante décadas: tablas, columnas, filas y relaciones entre ellas. Las propiedades ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad) garantizan la integridad de los datos incluso ante fallos del sistema~\parencite{melton2002sql}. Sin embargo, la rigidez esquemática (definición previa de esquemas, mantenimiento de claves foráneas) representa un cuello de botella cuando se requiere escalabilidad horizontal o manejo de estructuras variables. Entre los sistemas gestores más representativos se encuentra Microsoft SQL Server, ampliamente documentado en la literatura~\parencite{delaney2013sql}.
+
+\subsubsection{Enfoque NoSQL}
+
+Las bases NoSQL surgieron para resolver las limitaciones de escalabilidad horizontal y flexibilidad de esquema~\parencite{corbellini2016nosql}. A cambio, sacrifican consistencia inmediata (teorema CAP), lo cual resulta aceptable para muchos casos de uso. El desafío radica en que cada motor NoSQL posee su propia API y sintaxis, por lo que el middleware documentado actúa como traductor universal desde SQL.
+
+\subsubsection{Bases de datos clave-valor}
+
+El modelo clave-valor destaca por su simplicidad: almacena pares clave - valor optimizando lecturas y escrituras de baja latencia~\parencite{decandia2007dynamo}.
+
+\paragraph{Firebase Realtime Database:} Servicio de Google que almacena datos como un árbol JSON en la nube. Se sincroniza en tiempo real y ofrece un SDK para Python. Se seleccionó para validar la traducción contra un servicio real en producción~\parencite{google2024firebase}.
+
+\subsection{Lenguajes y herramientas para el análisis de consultas}
+
+El análisis de consultas SQL requiere tokenización, identificación de cláusulas, extracción de valores y manejo de alias. A continuación se describen las herramientas utilizadas.
+
+\subsubsection{Python y librerías de análisis}
+
+Se seleccionó Python por su legibilidad y ecosistema de librerías~\parencite{tiobe2024index, gift2020python}. Para el análisis léxico se utilizó \texttt{sqlparse}, que tokeniza sentencias SQL sin validación semántica completa~\parencite{albrecht2023sqlparse}. Se complementó con el módulo \texttt{re} (expresiones regulares) para capturar patrones complejos como operadores \texttt{LIKE} o condiciones múltiples~\parencite{lutz2021programming}.
+
+\subsubsection{Herramientas de desarrollo}
+
+El flujo de trabajo se apoyó en Visual Studio Code~\parencite{microsoft2023vscode}, Git/GitHub para control de versiones~\parencite{chacon2014progit, github2023platform} y Figma para los prototipos de interfaz~\parencite{figma2023platform}. Los diagramas de arquitectura se generaron con Mermaid, permitiendo un enfoque de diagramación como código.
+
+\subsection{Frameworks}
+
+\subsubsection{Flask}
+
+Microframework de Python utilizado para exponer el middleware como API REST. Su ligereza y la función \texttt{jsonify()} facilitan la serialización de respuestas JSON~\parencite{relan2019flask, grinberg2018flask}.
+
+\subsubsection{React y Next.js}
+
+Para el frontend se utilizó React por su capacidad de construir interfaces reactivas con componentes reutilizables~\parencite{banks2020learning, hoque2020fullstack}. Se integró Next.js para el renderizado híbrido (SSR/CSR) y una estructura de rutas organizada, logrando una interfaz donde el usuario escribe consultas y visualiza resultados de forma inmediata~\parencite{vercel2024docs}.
+
+\subsection{Metodología de desarrollo}
+
+Se adoptó \textbf{Scrum} debido a las incertidumbres iniciales del proyecto: no estaba claro el alcance de traducción SQL soportable ni el comportamiento de Firebase ante filtros complejos~\parencite{schwaber2020scrum}. Los sprints de dos semanas permitieron iterar, validar supuestos y ajustar el rumbo oportunamente~\parencite{sutherland2014scrum}.
+
+\subsection{Pruebas de software}
+
+Para verificar el funcionamiento del middleware se aplicaron dos tipos de pruebas:
+\begin{itemize}
+    \item \textbf{Pruebas funcionales:} Se verificó que cada tipo de consulta SQL genere la salida NoSQL correcta mediante pruebas de caja negra~\parencite{sommerville2011software}.
+    \item \textbf{Pruebas no funcionales:} Se evaluó la usabilidad de la interfaz mediante una evaluación heurística~\parencite{burnstein2003practical}.
+\end{itemize}

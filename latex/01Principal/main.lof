@@ -1,0 +1,39 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {xchapter}{INTRODUCCIÓN}{1}{chapter.1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{METODOLOGÍA}{7}{chapter.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de contenedores de la solución (Middleware SQL-NoSQL)}}{23}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Prototipo de la interfaz de usuario: Editor y Panel de Resultados}}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama de Secuencia: Flujo de traducción y ejecución híbrida}}{33}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Estructura de datos en Firebase Realtime Database (Visualización de Northwind)}}{34}{figure.caption.31}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{RESULTADOS, CONCLUSIONES Y RECOMENDACIONES}{44}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Resultado de inserción simple en la interfaz}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Confirmación de inserción masiva (2 registros)}}{46}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Visualización de todos los registros}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Recuperación optimizada por ID}}{48}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultado con proyección (Solo campo 'interests')}}{49}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Filtrado numérico (> 63000)}}{50}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultado de filtro por patrón exacto}}{51}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultado de filtro Case Insensitive}}{52}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Resultado de filtrado compuesto (AND)}}{53}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Resultado de actualización masiva}}{54}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Confirmación de eliminación de registros}}{55}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Error de sintaxis reportado en la interfaz}}{56}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Manejo de consulta a colección inexistente}}{57}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Usuario redimensionando el panel de salida (H3)}}{58}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Bloqueo de ejecución por falta de conexión (H5)}}{59}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Consola expandida para revisión detallada (H7)}}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Interfaz minimalista en modo oscuro (H8)}}{60}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Mensaje de error descriptivo en consola (H9)}}{61}{figure.caption.51}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{REFERENCIAS BIBLIOGRÁFICAS}{65}{chapter.4}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conjunto de datos (Dataset NoSQL)}{68}{appendix.Alph1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Detalle de planificación (Backlog)}{70}{appendix.Alph2}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Guía de instalación y despliegue}{74}{appendix.Alph3}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Enlaces y recursos}{76}{appendix.Alph4}%

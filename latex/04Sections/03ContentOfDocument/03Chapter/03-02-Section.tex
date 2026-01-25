@@ -1,0 +1,11 @@
+El desarrollo y validación del middleware SQL-NoSQL permite establecer las siguientes conclusiones con respecto a los objetivos planteados:
+ 
+ \begin{itemize}
+     \item \textbf{Viabilidad de la traducción SQL-NoSQL:} Se demostró que es posible traducir un subconjunto significativo del estándar SQL-92 (incluyendo proyecciones, filtros y patrones) a operaciones de Firebase Realtime Database. El uso de \texttt{sqlparse} combinado con expresiones regulares resultó ser una estrategia robusta para la normalización y análisis sintáctico de las sentencias, permitiendo una identificación precisa de la intención del usuario.
+     
+     \item \textbf{Eficacia de la estrategia híbrida:} La implementación de una estrategia de ejecución híbrida (Fetch \& Filter) permitió superar las limitaciones nativas de Firebase (como la falta de soporte para \texttt{ILIKE} o condiciones \texttt{OR}). Si bien esta aproximación transfiere carga computacional al middleware, las pruebas funcionales confirmaron su eficacia para colecciones de tamaño moderado, ofreciendo una flexibilidad de consulta que la base de datos no posee por sí misma.
+     
+     \item \textbf{Calidad de la experiencia de usuario:} La Evaluación Heurística confirmó que la interfaz cumple satisfactoriamente con los estándares de la industria, obteniendo una calificación de \textbf{Severidad 0} en principios críticos como prevención de errores y control del usuario. Si bien se detectaron oportunidades de mejora en la documentación integrada (Severidad 2), el sistema demostró ser intuitivo y seguro para el perfil técnico objetivo, validando el diseño minimalista centrado en el código.
+     
+     \item \textbf{Separación de responsabilidades:} La arquitectura por capas implementada, con un desacoplamiento claro entre el Parser, el Controlador y la Interfaz de Usuario, facilitó la evolución independiente del Frontend y Backend. Esto se evidenció durante el desarrollo, donde cambios en la lógica de 'store' del frontend (paso de Context a Hooks) no impactaron la estabilidad de la API de traducción.
+ \end{itemize}

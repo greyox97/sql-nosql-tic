@@ -1,0 +1,40 @@
+\documentclass{thesis}
+
+\title{Escuela Politécnica Nacional \\ Plantilla para Tesis de FIS TIC}
+\author{EPN-FIS}
+
+\input{additionalSettings}
+
+\begin{document}
+    \pagenumbering{roman}
+    %%% COVER PAGE
+    \input{../04Sections/01CoverPage/00-titlePageMain}
+    
+    %%% PRELIMINARY
+    \input{../04Sections/02Preliminary/01-Certification}
+    \input{../04Sections/02Preliminary/02-Declaration}
+    \input{../04Sections/02Preliminary/03-Dedication}
+    \input{../04Sections/02Preliminary/04-Acknowledgements}
+
+    %% TABLE OF CONTENTS
+    \dominitoc
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    
+    %% Extra: List of To Do's - Useful to see where in the document you need a revision :D
+    %\listoftodos
+    
+    %%% ABSTRACT
+    \input{../04Sections/03ContentOfDocument/00Abstract/00Abstract}
+
+    %%% CONTENT OF DOCUMENT
+    \input{../04Sections/03ContentOfDocument/00-ContentOfDocument}
+
+    %%% REFERENCES
+    \input{../04Sections/04References/00-References}
+
+    %%% ANNEXES
+    \input{../04Sections/05Annexes/00-Annexes}
+    
+\end{document}

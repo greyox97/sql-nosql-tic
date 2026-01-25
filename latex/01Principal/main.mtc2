@@ -1,0 +1,70 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Marco de trabajo: SCRUM}{\reset@font\mtcSfont 7}{section.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}Justificación de la metodología}{\reset@font\mtcSSfont 7}{subsection.2.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}Aplicación de Scrum en el proyecto}{\reset@font\mtcSSfont 8}{subsection.2.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Roles asignados}{\reset@font\mtcSSSfont 8}{subsection.2.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Artefactos utilizados}{\reset@font\mtcSSSfont 8}{table.caption.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Eventos realizados}{\reset@font\mtcSSSfont 9}{table.caption.11}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Flujo de trabajo}{\reset@font\mtcSSSfont 10}{table.caption.12}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Fase exploratoria}{\reset@font\mtcSfont 11}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Stakeholders}{\reset@font\mtcSSfont 11}{subsection.2.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Historias de usuario}{\reset@font\mtcSSfont 12}{subsection.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Detalle de historias de usuario}{\reset@font\mtcSSSfont 13}{subsection.2.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Fase de inicialización}{\reset@font\mtcSfont 19}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Sistema de puntuación}{\reset@font\mtcSSfont 19}{subsection.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Herramientas y tecnologías}{\reset@font\mtcSSfont 20}{subsection.2.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Entorno de desarrollo}{\reset@font\mtcSSfont 21}{subsection.2.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}Product backlog}{\reset@font\mtcSSfont 21}{subsection.2.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.5}Arquitectura del sistema}{\reset@font\mtcSSfont 22}{subsection.2.3.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Fase de desarrollo}{\reset@font\mtcSfont 24}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Sprint 0 - Arquitectura y prototipado}{\reset@font\mtcSSfont 24}{subsection.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Prototipos (Mockups)}{\reset@font\mtcSSSfont 24}{subsection.2.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Sprint 1 - Entrada y ejecución básica}{\reset@font\mtcSSfont 25}{subsection.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Sprint planning - Sprint 1}{\reset@font\mtcSSSfont 25}{subsection.2.4.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Planificación:}{\reset@font\mtcPfont 25}{subsection.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 1}{\reset@font\mtcSSSfont 25}{subsection.2.4.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Implementación del endpoint:}{\reset@font\mtcPfont 26}{subsection.2.4.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Controlador de consultas:}{\reset@font\mtcPfont 26}{lstnumber.2.2.8}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Cliente de Firebase:}{\reset@font\mtcPfont 27}{lstnumber.2.3.17}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Validación sintáctica inicial:}{\reset@font\mtcPfont 27}{lstnumber.2.4.14}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y retrospectiva - Sprint 1}{\reset@font\mtcSSSfont 28}{lstnumber.2.5.15}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 28}{lstnumber.2.5.15}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Sprint 2 - Traducción SQL a NoSQL y manejo de errores}{\reset@font\mtcSSfont 28}{subsection.2.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Planificación}{\reset@font\mtcSSSfont 28}{subsection.2.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 2}{\reset@font\mtcSSSfont 29}{subsection.2.4.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Normalización y parsing avanzado:}{\reset@font\mtcPfont 29}{subsection.2.4.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Soporte para modificaciones (INSERT/UPDATE/DELETE):}{\reset@font\mtcPfont 30}{lstnumber.2.7.18}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Manejo de errores descriptivos:}{\reset@font\mtcPfont 31}{lstnumber.2.8.15}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y retrospectiva - Sprint 2}{\reset@font\mtcSSSfont 31}{lstnumber.2.9.20}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 32}{table.caption.29}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}Sprint 3 - Visualización y comparación de resultados}{\reset@font\mtcSSfont 32}{subsection.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Planificación}{\reset@font\mtcSSSfont 32}{subsection.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 3}{\reset@font\mtcSSSfont 32}{subsection.2.4.4}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Orquestación del flujo:}{\reset@font\mtcPfont 32}{subsection.2.4.4}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Estrategia de Ejecución Híbrida:}{\reset@font\mtcPfont 33}{figure.caption.30}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y Retrospectiva - Sprint 3}{\reset@font\mtcSSSfont 34}{lstnumber.2.10.16}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 35}{figure.caption.31}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.5}Sprint 4 - Refinamiento y documentación final}{\reset@font\mtcSSfont 35}{subsection.2.4.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Planificación}{\reset@font\mtcSSSfont 35}{subsection.2.4.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 4}{\reset@font\mtcSSSfont 35}{subsection.2.4.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Mejoras en el manejo de errores:}{\reset@font\mtcPfont 35}{subsection.2.4.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Generación de snippets de código:}{\reset@font\mtcPfont 36}{lstnumber.2.11.36}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Validación de datos en Firebase:}{\reset@font\mtcPfont 37}{table.caption.32}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Documentación técnica:}{\reset@font\mtcPfont 37}{lstnumber.2.13.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Organización del código:}{\reset@font\mtcPfont 38}{lstnumber.2.14.29}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y retrospectiva - Sprint 4}{\reset@font\mtcSSSfont 39}{lstnumber.2.14.29}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 39}{lstnumber.2.14.29}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.6}Sprint 5 - Arquitectura frontend e interfaz de usuario}{\reset@font\mtcSSfont 39}{subsection.2.4.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Planificación}{\reset@font\mtcSSSfont 39}{subsection.2.4.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 5}{\reset@font\mtcSSSfont 39}{subsection.2.4.6}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Diseño modular de componentes:}{\reset@font\mtcPfont 39}{subsection.2.4.6}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Estilizado con Tailwind CSS:}{\reset@font\mtcPfont 41}{lstnumber.2.15.21}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y retrospectiva - Sprint 5}{\reset@font\mtcSSSfont 41}{lstnumber.2.15.21}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 41}{lstnumber.2.15.21}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.7}Sprint 6 - Lógica de integración y gestión de estado}{\reset@font\mtcSSfont 41}{subsection.2.4.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Planificación}{\reset@font\mtcSSSfont 41}{subsection.2.4.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Desarrollo - Sprint 6}{\reset@font\mtcSSSfont 41}{subsection.2.4.7}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Contexto Global (Store):}{\reset@font\mtcPfont 41}{subsection.2.4.7}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retroalimentación Visual (HU08):}{\reset@font\mtcPfont 42}{lstnumber.2.16.24}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Manejo de CORS:}{\reset@font\mtcPfont 43}{lstnumber.2.16.24}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados y retrospectiva - Sprint 6}{\reset@font\mtcSSSfont 43}{lstnumber.2.16.24}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Retrospectiva:}{\reset@font\mtcPfont 43}{lstnumber.2.16.24}}

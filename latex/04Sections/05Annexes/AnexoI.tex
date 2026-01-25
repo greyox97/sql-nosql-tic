@@ -1,0 +1,55 @@
+A continuación se presenta un extracto representativo de la estructura de datos migrada a Firebase Realtime Database. Este formato muestra cómo las entidades relacionales (en este caso, Empleados) fueron transformadas a un modelo orientado a documentos JSON, utilizando claves compuestas (email) para optimizar la búsqueda.
+
+ \begin{lstlisting}[language=python, caption={Ejemplo de estructura JSON en Firebase (Colección Empleados)}]
+ {
+   "northwind": {
+     "iconley@altonrealty_com": {
+       "displayName": "Aileen, Isabelle",
+       "company": "Alton Realty",
+       "title": "Accountant",
+       "firstName": "Isabelle",
+       "lastName": "Aileen",
+       "email": "iconley@altonrealty.com",
+       "commonId": 63311,
+       "team": "Finance",
+       "subTeam": 0,
+       "hireDate": "3/17/2007",
+       "fax": "(313) 068-3076",
+       "state": "Michigan",
+       "zip": 48207,
+       "officeCity": "Detroit",
+       "teamLeader": "Katherine Castillo",
+       "office": "The Palace",
+       "pictureUrl": 0,
+       "extension": 83076,
+       "skills": [
+         "Health",
+         "Developers",
+         "Craft",
+         "Drama",
+         "Drafters"
+       ],
+       "interests": [
+         "Tai chi",
+         "Beach Volleyball",
+         "Kayaking",
+         "Basketball",
+         "Association football"
+       ]
+     },
+     "jbird@altonrealty_com": {
+       "displayName": "Bird, Joy",
+       "title": "Accountant",
+       "email": "jbird@altonrealty.com",
+       "commonId": 63936,
+       "team": "Finance",
+       "hireDate": "9/15/2010",
+       "skills": [
+         "Philosophy",
+         "Political",
+         "Coaches"
+       ]
+     }
+   }
+ }
+ \end{lstlisting}

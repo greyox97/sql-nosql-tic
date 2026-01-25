@@ -1,0 +1,53 @@
+En este anexo se detallan los pasos necesarios para desplegar la aplicación en un entorno local, asegurando la reproducibilidad de los resultados presentados en esta tesis.
+ 
+ \section*{Requisitos previos}
+ \begin{itemize}
+     \item \textbf{Python:} Versión 3.8 o superior.
+     \item \textbf{Node.js:} Versión 18.x o superior.
+     \item \textbf{Firebase:} Proyecto activo en Firebase Console con Realtime Database habilitado.
+ \end{itemize}
+ 
+ \section*{Pasos de instalación}
+ 
+ \subsection*{1. Clonar el repositorio}
+ \begin{lstlisting}[language=bash]
+ git clone https://github.com/greyox97/sql-nosql-tic.git
+ cd sql-nosql-tic
+ \end{lstlisting}
+ 
+ \subsection*{2. Configurar el Backend (Flask)}
+ Navegar al directorio raíz del backend y crear un entorno virtual:
+ \begin{lstlisting}[language=bash]
+ cd backend
+ python -m venv venv
+ source venv/bin/activate  # En Windows: venv\Scripts\activate
+ pip install -r requirements.txt
+ \end{lstlisting}
+ 
+ Configurar las variables de entorno creando un archivo \texttt{.env} en la raíz del backend:
+ \begin{lstlisting}[language=bash]
+ FIREBASE_CREDENTIALS=ruta/a/tus/credenciales.json
+ FIREBASE_DB_URL=https://tu-proyecto.firebaseio.com/
+ \end{lstlisting}
+ 
+ \subsection*{3. Configurar el Frontend (Next.js)}
+ Navegar al directorio del frontend e instalar dependencias:
+ \begin{lstlisting}[language=bash]
+ cd ../frontend
+ npm install
+ \end{lstlisting}
+ 
+ \subsection*{4. Ejecución}
+ Iniciar los servidores de desarrollo en dos terminales separadas:
+ 
+ \textbf{Terminal 1 (Backend):}
+ \begin{lstlisting}[language=bash]
+ flask run --debug --port 5000
+ \end{lstlisting}
+ 
+ \textbf{Terminal 2 (Frontend):}
+ \begin{lstlisting}[language=bash]
+ npm run dev
+ \end{lstlisting}
+ 
+ La aplicación estará disponible en \texttt{http://localhost:3000}.

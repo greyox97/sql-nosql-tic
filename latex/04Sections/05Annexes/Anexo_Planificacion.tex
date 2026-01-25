@@ -1,0 +1,184 @@
+Este anexo detalla las tareas técnicas, tipos de trabajo y estimaciones horarias para cada Historia de Usuario implementada, complementando la visión general presentada en el Capítulo 2.
+ 
+ % Backlog HU01
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU01 --- Ingresar una consulta SQL}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T1.1 & Dise\~nar la secci\'on de entrada de texto para consultas SQL. & Dise\~no UI & 4 \\
+         T1.2 & Implementar campo de texto con resaltado de sintaxis. & Desarrollo frontend & 6 \\
+         T1.3 & Validar la estructura b\'asica de sentencias SQL (SELECT, FROM, WHERE). & Desarrollo backend & 6 \\
+         T1.4 & Probar la entrada y validaci\'on con ejemplos de consultas simples. & Pruebas funcionales & 4 \\
+         T1.5 & Revisar la legibilidad y facilidad de uso en distintos tama\~nos de pantalla. & Validaci\'on UX & 2 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU01}
+ \end{table}
+ 
+ % Backlog HU02
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU02 --- Ejecutar la consulta SQL}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T2.1 & Crear bot\'on de ejecuci\'on y su evento asociado. & Desarrollo frontend & 4 \\
+         T2.2 & Configurar endpoint Flask para recibir la consulta. & Desarrollo backend & 6 \\
+         T2.3 & Integrar comunicaci\'on HTTP Frontend $\rightarrow$ Backend. & Integraci\'on & 6 \\
+         T2.4 & Manejar errores de ejecuci\'on (sintaxis, conexi\'on, timeout). & Backend & 4 \\
+         T2.5 & Implementar mensajes de resultado y notificaciones visuales. & Frontend & 4 \\
+         T2.6 & Probar flujo completo con consultas v\'alidas e inv\'alidas. & Pruebas & 4 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU02}
+ \end{table}
+ 
+ % Backlog HU03
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU03 --- Ver la traducci\'on generada de la consulta}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T3.1 & Dise\~nar panel para mostrar traducci\'on NoSQL. & Dise\~no UI & 4 \\
+         T3.2 & Implementar m\'odulo de traducci\'on SQL $\rightarrow$ NoSQL (clave--valor). & Desarrollo backend & 10 \\
+         T3.3 & Mostrar la traducci\'on generada en tiempo real en el panel. & Frontend & 6 \\
+         T3.4 & Agregar opci\'on para copiar la traducci\'on al portapapeles. & Frontend & 2 \\
+         T3.5 & Validar precisi\'on de la traducci\'on con ejemplos. & Pruebas & 4 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU03}
+ \end{table}
+ 
+ % Backlog HU04
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU04 --- Identificar errores en la traducci\'on}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T4.1 & Definir estructura de mensajes de error de traducci\'on. & Backend & 4 \\
+         T4.2 & Implementar manejo de errores detallado en m\'odulo traductor. & Backend & 6 \\
+         T4.3 & Mostrar mensajes en interfaz junto a la consulta. & Frontend & 4 \\
+         T4.4 & Validar distintos escenarios de error (palabras clave, sintaxis). & Pruebas & 4 \\
+         T4.5 & Revisar usabilidad y comprensi\'on de los mensajes. & UX & 2 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU04}
+ \end{table}
+ 
+ % Backlog HU05
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU05 --- Visualizar resultados de la ejecuci\'on}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T5.1 & Dise\~nar componente de tabla para mostrar resultados. & Dise\~no UI & 4 \\
+         T5.2 & Implementar renderizado din\'amico de datos en tabla. & Frontend & 6 \\
+         T5.3 & Recibir respuesta desde el backend (JSON). & Integraci\'on & 4 \\
+         T5.4 & Mostrar cantidad de registros y tiempo de ejecuci\'on. & Frontend & 4 \\
+         T5.5 & Probar visualizaci\'on con distintos tama\~nos de resultados. & Pruebas & 4 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU05}
+ \end{table}
+ 
+ % Backlog HU06
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU06 --- Ver consulta original y traducci\'on simult\'aneamente}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T6.1 & Dise\~nar disposici\'on doble de paneles (SQL / NoSQL). & Dise\~no UI & 4 \\
+         T6.2 & Implementar vista con sincronizaci\'on de desplazamiento. & Frontend & 6 \\
+         T6.3 & Agregar control para ocultar/mostrar panel de traducci\'on. & Frontend & 4 \\
+         T6.4 & Validar que ambas vistas se actualicen tras ejecutar consulta. & Pruebas & 4 \\
+         T6.5 & Revisar la alineaci\'on visual y consistencia de formato. & UX & 2 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU06}
+ \end{table}
+ 
+ % Backlog HU07
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU07 --- Interfaz intuitiva y ordenada}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T7.1 & Unificar esquema visual (tipograf\'ia, colores, espaciado). & Dise\~no UI & 4 \\
+         T7.2 & Revisar jerarqu\'ia visual y consistencia entre secciones. & UX & 4 \\
+         T7.3 & Implementar mejoras visuales (\'iconos, bordes, layout). & Frontend & 6 \\
+         T7.4 & Validar la experiencia de usuario con feedback de compa\~neros. & Validaci\'on & 2 \\
+         T7.5 & Documentar lineamientos visuales b\'asicos. & Documentaci\'on & 2 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU07}
+ \end{table}
+ 
+ % Backlog HU08
+ \begin{table}[H]
+     \centering
+     \caption{Backlog HU08 --- Retroalimentaci\'on visual durante la ejecuci\'on}
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{l p{0.58\textwidth} l c}
+         \hline
+         \textbf{ID Tarea} & \textbf{Descripci\'on de la tarea} & \textbf{Tipo} & \textbf{Estimaci\'on (h)} \\
+         \hline
+         T8.1 & Dise\~nar animaci\'on o indicador de progreso. & Dise\~no UI & 3 \\
+         T8.2 & Implementar indicador de carga en frontend. & Frontend & 4 \\
+         T8.3 & Integrar estados de procesamiento, \'{e}xito y error. & Frontend & 4 \\
+         T8.4 & Validar que el indicador desaparezca correctamente al finalizar. & Pruebas & 3 \\
+         T8.5 & Probar con ejecuciones largas o con error simulado. & QA & 2 \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_HU08}
+ \end{table}
+ 
+ % Totales aproximados
+ \begin{table}[H]
+     \centering
+     \caption{Totales aproximados por categor\'ia}
+     {\small
+     \begin{tabular}{p{0.7\textwidth} c}
+         \hline
+         \textbf{Categor\'ia} & \textbf{Horas estimadas} \\
+         \hline
+         Dise\~no UI/UX & 39 \\
+         Desarrollo frontend & 48 \\
+         Desarrollo backend & 32 \\
+         Integraci\'on & 10 \\
+         Pruebas / QA & 23 \\
+         Documentaci\'on / Validaci\'on & 8 \\
+         \textbf{Total general} & \textbf{$\approx 160$ horas t\'ecnicas} \\
+         \hline
+     \end{tabular}%
+     }
+     \label{tab:BL_Totales}
+ \end{table}
