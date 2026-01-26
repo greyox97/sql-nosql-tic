@@ -2,7 +2,7 @@ PWD c:/Users/Sebastian/Documents/sql-nosql-tic/Latex/01Principal
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Sebastian/Documents/sql-nosql-tic/Latex/01Principal/main.tex
+INPUT c:/Users/Sebastian/Documents/sql-nosql-tic/latex/01Principal/main.tex
 OUTPUT main.log
 INPUT ./thesis.cls
 INPUT thesis.cls

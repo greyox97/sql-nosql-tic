@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.25)  24 JAN 2026 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.25)  25 JAN 2026 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/Sebastian/Documents/sql-nosql-tic/Latex/01Principal/main.tex
-(c:/Users/Sebastian/Documents/sql-nosql-tic/Latex/01Principal/main.tex
+(c:/Users/Sebastian/Documents/sql-nosql-tic/latex/01Principal/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
 (./thesis.cls
@@ -1043,12 +1043,7 @@ Package newfloat Info: Setting Plan B file extension to `lof'... on input line 4
 ] (../04Sections/03ContentOfDocument/01Chapter/01-01-Section.tex) (../04Sections/03ContentOfDocument/01Chapter/01-02-Section.tex [2]) (../04Sections/03ContentOfDocument/01Chapter/01-03-Section.tex) (../04Sections/03ContentOfDocument/01Chapter/01-04-Section.tex [3]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 5.
- [4] [5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Overfull \hbox (2.16243pt too wide) in paragraph at lines 47--48
-\T1/phv/m/n/10.95 com-po-nen-tes re-uti-li-za-bles [[][]21[][], [][]22[][]]. Se in-te-gró Next.js pa-ra el ren-de-ri-za-do hí-bri-do (SSR/CSR)
- []
-
-)) [6]
+ [4] [5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])) [6]
 Cap\'{\i }tulo 2.
 (../04Sections/03ContentOfDocument/02Chapter/02-00-Chapter.tex [7
 
@@ -1379,15 +1374,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29612 strings out of 467538
- 512397 string characters out of 5423724
+ 29613 strings out of 467538
+ 512458 string characters out of 5423724
  1684894 words of memory out of 5000000
  57424 multiletter control sequences out of 15000+600000
  694013 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,13n,131p,1644b,2321s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 4514777 bytes).
+Output written on main.pdf (88 pages, 4514755 bytes).
 PDF statistics:
  1438 PDF objects out of 1440 (max. 8388607)
  1277 compressed objects within 13 object streams
