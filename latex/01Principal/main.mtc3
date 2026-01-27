@@ -1,33 +1,33 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Resultados}{\reset@font\mtcSfont 44}{section.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Pruebas de inserción de datos}{\reset@font\mtcSSfont 44}{subsection.3.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 1: Inserción simple}{\reset@font\mtcSSSfont 44}{subsection.3.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 2: Inserción masiva (Batch)}{\reset@font\mtcSSSfont 45}{figure.caption.34}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}Pruebas de selección y filtrado}{\reset@font\mtcSSfont 46}{subsection.3.1.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 3: Selección total}{\reset@font\mtcSSSfont 46}{subsection.3.1.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 4: Búsqueda por ID}{\reset@font\mtcSSSfont 47}{figure.caption.36}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 5: Proyección de columnas}{\reset@font\mtcSSSfont 48}{figure.caption.37}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 6: Filtrado por rango}{\reset@font\mtcSSSfont 49}{figure.caption.38}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 7: Filtrado por patrones (LIKE)}{\reset@font\mtcSSSfont 50}{figure.caption.39}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 8: Patrones insensibles a mayúsculas (ILIKE)}{\reset@font\mtcSSSfont 51}{figure.caption.40}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 9: Lógica compuesta (AND)}{\reset@font\mtcSSSfont 52}{figure.caption.41}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.3}Pruebas de manipulación de datos}{\reset@font\mtcSSfont 53}{subsection.3.1.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 10: Actualización parcial (Batch update)}{\reset@font\mtcSSSfont 53}{subsection.3.1.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 11: Eliminación lógica/física}{\reset@font\mtcSSSfont 54}{figure.caption.43}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.4}Pruebas de manejo de errores}{\reset@font\mtcSSfont 55}{subsection.3.1.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 12: Error de sintaxis}{\reset@font\mtcSSSfont 55}{subsection.3.1.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 13: Error semántico (Tabla inexistente)}{\reset@font\mtcSSSfont 56}{figure.caption.45}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.5}Pruebas no funcionales: Usabilidad}{\reset@font\mtcSSfont 57}{subsection.3.1.5}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados de la evaluación heurística}{\reset@font\mtcSSSfont 57}{subsection.3.1.5}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H1: Visibilidad del estado del sistema (Severidad: 0)}{\reset@font\mtcPfont 57}{subsection.3.1.5}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H2: Correspondencia con el mundo real (Severidad: 0)}{\reset@font\mtcPfont 57}{subsection.3.1.5}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H3: Control y libertad del usuario (Severidad: 0)}{\reset@font\mtcPfont 58}{subsection.3.1.5}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H4: Consistencia y estándares (Severidad: 0)}{\reset@font\mtcPfont 58}{figure.caption.47}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H5: Prevención de errores (Severidad: 0)}{\reset@font\mtcPfont 58}{figure.caption.47}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H6: Reconocimiento antes que recuerdo (Severidad: 0)}{\reset@font\mtcPfont 59}{figure.caption.48}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H7: Flexibilidad y eficiencia de uso (Severidad: 1)}{\reset@font\mtcPfont 59}{figure.caption.48}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H8: Estética y diseño minimalista (Severidad: 0)}{\reset@font\mtcPfont 60}{figure.caption.49}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H9: Ayuda a reconocer y recuperar errores (Severidad: 0)}{\reset@font\mtcPfont 61}{figure.caption.50}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H10: Ayuda y documentación (Severidad: 2)}{\reset@font\mtcPfont 61}{figure.caption.51}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Reporte de severidad}{\reset@font\mtcSSSfont 61}{figure.caption.51}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Conclusiones}{\reset@font\mtcSfont 62}{section.3.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Recomendaciones}{\reset@font\mtcSfont 63}{section.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Resultados}{\reset@font\mtcSfont 45}{section.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Pruebas de inserción de datos}{\reset@font\mtcSSfont 45}{subsection.3.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 1: Inserción simple}{\reset@font\mtcSSSfont 45}{subsection.3.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 2: Inserción masiva (Batch)}{\reset@font\mtcSSSfont 46}{figure.caption.34}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}Pruebas de selección y filtrado}{\reset@font\mtcSSfont 47}{subsection.3.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 3: Selección total}{\reset@font\mtcSSSfont 47}{subsection.3.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 4: Búsqueda por ID}{\reset@font\mtcSSSfont 48}{figure.caption.36}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 5: Proyección de columnas}{\reset@font\mtcSSSfont 49}{figure.caption.37}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 6: Filtrado por rango}{\reset@font\mtcSSSfont 50}{figure.caption.38}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 7: Filtrado por patrones (LIKE)}{\reset@font\mtcSSSfont 51}{figure.caption.39}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 8: Patrones insensibles a mayúsculas (ILIKE)}{\reset@font\mtcSSSfont 52}{figure.caption.40}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 9: Lógica compuesta (AND)}{\reset@font\mtcSSSfont 53}{figure.caption.41}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.3}Pruebas de manipulación de datos}{\reset@font\mtcSSfont 54}{subsection.3.1.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 10: Actualización parcial (Batch update)}{\reset@font\mtcSSSfont 54}{subsection.3.1.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 11: Eliminación lógica/física}{\reset@font\mtcSSSfont 55}{figure.caption.43}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.4}Pruebas de manejo de errores}{\reset@font\mtcSSfont 56}{subsection.3.1.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 12: Error de sintaxis}{\reset@font\mtcSSSfont 56}{subsection.3.1.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Caso 13: Error semántico (Tabla inexistente)}{\reset@font\mtcSSSfont 57}{figure.caption.45}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.5}Pruebas no funcionales: Usabilidad}{\reset@font\mtcSSfont 58}{subsection.3.1.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultados de la evaluación heurística}{\reset@font\mtcSSSfont 58}{subsection.3.1.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H1: Visibilidad del estado del sistema (Severidad: 0)}{\reset@font\mtcPfont 58}{subsection.3.1.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H2: Correspondencia con el mundo real (Severidad: 0)}{\reset@font\mtcPfont 58}{subsection.3.1.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H3: Control y libertad del usuario (Severidad: 0)}{\reset@font\mtcPfont 59}{subsection.3.1.5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H4: Consistencia y estándares (Severidad: 0)}{\reset@font\mtcPfont 59}{figure.caption.47}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H5: Prevención de errores (Severidad: 0)}{\reset@font\mtcPfont 59}{figure.caption.47}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H6: Reconocimiento antes que recuerdo (Severidad: 0)}{\reset@font\mtcPfont 60}{figure.caption.48}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H7: Flexibilidad y eficiencia de uso (Severidad: 1)}{\reset@font\mtcPfont 60}{figure.caption.48}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H8: Estética y diseño minimalista (Severidad: 0)}{\reset@font\mtcPfont 61}{figure.caption.49}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H9: Ayuda a reconocer y recuperar errores (Severidad: 0)}{\reset@font\mtcPfont 62}{figure.caption.50}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode H10: Ayuda y documentación (Severidad: 2)}{\reset@font\mtcPfont 62}{figure.caption.51}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Reporte de severidad}{\reset@font\mtcSSSfont 62}{figure.caption.51}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Conclusiones}{\reset@font\mtcSfont 63}{section.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Recomendaciones}{\reset@font\mtcSfont 64}{section.3.3}}

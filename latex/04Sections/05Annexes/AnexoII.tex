@@ -1,53 +1,121 @@
-En este anexo se detallan los pasos necesarios para desplegar la aplicación en un entorno local, asegurando la reproducibilidad de los resultados presentados en esta tesis.
- 
- \section*{Requisitos previos}
- \begin{itemize}
-     \item \textbf{Python:} Versión 3.8 o superior.
-     \item \textbf{Node.js:} Versión 18.x o superior.
-     \item \textbf{Firebase:} Proyecto activo en Firebase Console con Realtime Database habilitado.
- \end{itemize}
- 
- \section*{Pasos de instalación}
- 
- \subsection*{1. Clonar el repositorio}
- \begin{lstlisting}[language=bash]
- git clone https://github.com/greyox97/sql-nosql-tic.git
- cd sql-nosql-tic
- \end{lstlisting}
- 
- \subsection*{2. Configurar el Backend (Flask)}
- Navegar al directorio raíz del backend y crear un entorno virtual:
- \begin{lstlisting}[language=bash]
- cd backend
- python -m venv venv
- source venv/bin/activate  # En Windows: venv\Scripts\activate
- pip install -r requirements.txt
- \end{lstlisting}
- 
- Configurar las variables de entorno creando un archivo \texttt{.env} en la raíz del backend:
- \begin{lstlisting}[language=bash]
- FIREBASE_CREDENTIALS=ruta/a/tus/credenciales.json
- FIREBASE_DB_URL=https://tu-proyecto.firebaseio.com/
- \end{lstlisting}
- 
- \subsection*{3. Configurar el Frontend (Next.js)}
- Navegar al directorio del frontend e instalar dependencias:
- \begin{lstlisting}[language=bash]
- cd ../frontend
- npm install
- \end{lstlisting}
- 
- \subsection*{4. Ejecución}
- Iniciar los servidores de desarrollo en dos terminales separadas:
- 
- \textbf{Terminal 1 (Backend):}
- \begin{lstlisting}[language=bash]
- flask run --debug --port 5000
- \end{lstlisting}
- 
- \textbf{Terminal 2 (Frontend):}
- \begin{lstlisting}[language=bash]
- npm run dev
- \end{lstlisting}
- 
- La aplicación estará disponible en \texttt{http://localhost:3000}.
+En este anexo se detallan los pasos necesarios para configurar el entorno de desarrollo y desplegar la aplicación localmente, asegurando la reproducibilidad de los resultados presentados en esta tesis.
+
+\section*{Requisitos previos}
+\begin{itemize}
+    \item \textbf{Python:} Versión 3.8 o superior.
+    \item \textbf{Node.js:} Versión 18.x o superior.
+    \item \textbf{Cuenta de Google:} Para acceder a Firebase Console.
+    \item \textbf{Git:} Para clonar el repositorio.
+\end{itemize}
+
+\section*{Configuración de Firebase}
+
+El backend requiere una base de datos Firebase Realtime Database como almacén NoSQL. A continuación se describen los pasos para configurarla:
+
+\subsection*{1. Crear proyecto en Firebase Console}
+\begin{enumerate}
+    \item Acceder a \texttt{https://console.firebase.google.com/}
+    \item Hacer clic en ``Agregar proyecto'' e ingresar un nombre (ej. \texttt{middleware-sql-nosql}).
+    \item Desactivar Google Analytics (opcional para este proyecto) y crear el proyecto.
+\end{enumerate}
+
+\subsection*{2. Habilitar Realtime Database}
+\begin{enumerate}
+    \item En el panel lateral, seleccionar ``Realtime Database'' bajo la sección ``Compilación''.
+    \item Hacer clic en ``Crear base de datos''.
+    \item Seleccionar la ubicación del servidor (ej. \texttt{europe-west1}).
+    \item Iniciar en ``modo de prueba'' para desarrollo (permite lectura/escritura sin autenticación por 30 días).
+\end{enumerate}
+
+\subsection*{3. Obtener credenciales de servicio}
+Para que el backend Python pueda autenticarse con Firebase:
+\begin{enumerate}
+    \item Ir a ``Configuración del proyecto'' (icono de engranaje) $\rightarrow$ ``Cuentas de servicio''.
+    \item Hacer clic en ``Generar nueva clave privada''.
+    \item Descargar el archivo JSON y renombrarlo a \texttt{credenciales-firebase.json}.
+    \item Colocar este archivo en el directorio \texttt{backend/database/}.
+\end{enumerate}
+
+\textbf{Nota de seguridad:} El archivo de credenciales contiene información sensible. Nunca debe subirse a repositorios públicos. El archivo \texttt{.gitignore} del proyecto ya incluye esta exclusión.
+
+\section*{Configuración del backend (Flask)}
+
+El backend fue desarrollado manualmente sin utilizar generadores de código. La estructura modular se creó archivo por archivo siguiendo el patrón MVC.
+
+\subsection*{1. Clonar el repositorio}
+\begin{lstlisting}[language=bash]
+git clone https://github.com/greyox97/sql-nosql-tic.git
+cd sql-nosql-tic
+\end{lstlisting}
+
+\subsection*{2. Crear entorno virtual e instalar dependencias}
+\begin{lstlisting}[language=bash]
+cd backend
+python -m venv venv
+# En Windows:
+venv\Scripts\activate
+# En Linux/Mac:
+source venv/bin/activate
+
+pip install -r requirements.txt
+\end{lstlisting}
+
+Las dependencias principales incluyen:
+\begin{itemize}
+    \item \texttt{flask}: Framework web ligero.
+    \item \texttt{flask-cors}: Manejo de CORS para comunicación con el frontend.
+    \item \texttt{firebase-admin}: SDK oficial de Firebase para Python.
+    \item \texttt{sqlparse}: Parser de sentencias SQL.
+\end{itemize}
+
+\subsection*{3. Configurar variables de entorno}
+Crear un archivo \texttt{.env} en el directorio \texttt{backend/} con el siguiente contenido:
+\begin{lstlisting}[language=bash]
+FIREBASE_CREDENTIALS=database/credenciales-firebase.json
+FIREBASE_DB_URL=https://tu-proyecto-default-rtdb.europe-west1.firebasedatabase.app/
+\end{lstlisting}
+
+Reemplazar \texttt{tu-proyecto} por el nombre real del proyecto Firebase.
+
+\section*{Configuración del frontend (Next.js)}
+
+\subsection*{1. Instalar dependencias}
+Navegar al directorio del frontend e instalar las dependencias:
+\begin{lstlisting}[language=bash]
+cd frontend
+npm install
+\end{lstlisting}
+
+\textbf{Nota técnica:} El proyecto fue inicialmente creado utilizando:
+\begin{lstlisting}[language=bash]
+npx create-next-app@latest frontend --typescript --tailwind --eslint --app --src-dir
+\end{lstlisting}
+
+Este comando configuró automáticamente TypeScript, Tailwind CSS, ESLint y el App Router. Para la replicación del proyecto, este paso no es necesario ya que la estructura generada está incluida en el repositorio.
+
+\section*{Ejecución del sistema}
+
+Una vez configurados ambos componentes, iniciar los servidores de desarrollo en dos terminales separadas:
+
+\subsection*{Terminal 1 - Backend (Puerto 5000)}
+\begin{lstlisting}[language=bash]
+cd backend
+python app.py
+\end{lstlisting}
+
+\subsection*{Terminal 2 - Frontend (Puerto 3000)}
+\begin{lstlisting}[language=bash]
+cd frontend
+npm run dev
+\end{lstlisting}
+
+La aplicación estará disponible en \texttt{http://localhost:3000}. El frontend se comunicará automáticamente con el backend en el puerto 5000 gracias a la configuración de CORS implementada.
+
+\section*{Verificación del despliegue}
+
+Para confirmar que el sistema funciona correctamente:
+\begin{enumerate}
+    \item Abrir \texttt{http://localhost:3000} en el navegador.
+    \item Ingresar una consulta de prueba: \texttt{SELECT * FROM northwind}
+    \item Verificar que se muestren resultados en la tabla y la traducción NoSQL en el panel derecho.
+\end{enumerate}

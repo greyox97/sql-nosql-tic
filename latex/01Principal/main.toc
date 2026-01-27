@@ -38,93 +38,93 @@
 \contentsline {subsection}{\numberline {2.3.5}Arquitectura del sistema}{22}{subsection.2.3.5}%
 \contentsline {section}{\numberline {2.4}Fase de desarrollo}{24}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Sprint 0 - Arquitectura y prototipado}{24}{subsection.2.4.1}%
-\contentsline {subsubsection}{Prototipos (Mockups)}{24}{subsection.2.4.1}%
+\contentsline {subsubsection}{Prototipos (Mockups)}{25}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Sprint 1 - Entrada y ejecución básica}{25}{subsection.2.4.2}%
 \contentsline {subsubsection}{Sprint planning - Sprint 1}{25}{subsection.2.4.2}%
 \contentsline {paragraph}{Planificación:}{25}{subsection.2.4.2}%
-\contentsline {subsubsection}{Desarrollo - Sprint 1}{25}{subsection.2.4.2}%
+\contentsline {subsubsection}{Desarrollo - Sprint 1}{26}{subsection.2.4.2}%
 \contentsline {paragraph}{Implementación del endpoint:}{26}{subsection.2.4.2}%
 \contentsline {paragraph}{Controlador de consultas:}{26}{lstnumber.2.2.8}%
 \contentsline {paragraph}{Cliente de Firebase:}{27}{lstnumber.2.3.17}%
-\contentsline {paragraph}{Validación sintáctica inicial:}{27}{lstnumber.2.4.14}%
+\contentsline {paragraph}{Validación sintáctica inicial:}{28}{lstnumber.2.4.14}%
 \contentsline {subsubsection}{Resultados y retrospectiva - Sprint 1}{28}{lstnumber.2.5.15}%
 \contentsline {paragraph}{Retrospectiva:}{28}{lstnumber.2.5.15}%
-\contentsline {subsection}{\numberline {2.4.3}Sprint 2 - Traducción SQL a NoSQL y manejo de errores}{28}{subsection.2.4.3}%
-\contentsline {subsubsection}{Planificación}{28}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}Sprint 2 - Traducción SQL a NoSQL y manejo de errores}{29}{subsection.2.4.3}%
+\contentsline {subsubsection}{Planificación}{29}{subsection.2.4.3}%
 \contentsline {subsubsection}{Desarrollo - Sprint 2}{29}{subsection.2.4.3}%
 \contentsline {paragraph}{Normalización y parsing avanzado:}{29}{subsection.2.4.3}%
 \contentsline {paragraph}{Soporte para modificaciones (INSERT/UPDATE/DELETE):}{30}{lstnumber.2.7.18}%
 \contentsline {paragraph}{Manejo de errores descriptivos:}{31}{lstnumber.2.8.15}%
-\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 2}{31}{lstnumber.2.9.20}%
+\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 2}{32}{lstnumber.2.9.20}%
 \contentsline {paragraph}{Retrospectiva:}{32}{table.caption.29}%
 \contentsline {subsection}{\numberline {2.4.4}Sprint 3 - Visualización y comparación de resultados}{32}{subsection.2.4.4}%
 \contentsline {subsubsection}{Planificación}{32}{subsection.2.4.4}%
 \contentsline {subsubsection}{Desarrollo - Sprint 3}{32}{subsection.2.4.4}%
-\contentsline {paragraph}{Orquestación del flujo:}{32}{subsection.2.4.4}%
+\contentsline {paragraph}{Orquestación del flujo:}{33}{subsection.2.4.4}%
 \contentsline {paragraph}{Estrategia de Ejecución Híbrida:}{33}{figure.caption.30}%
 \contentsline {subsubsection}{Resultados y Retrospectiva - Sprint 3}{34}{lstnumber.2.10.16}%
 \contentsline {paragraph}{Retrospectiva:}{35}{figure.caption.31}%
 \contentsline {subsection}{\numberline {2.4.5}Sprint 4 - Refinamiento y documentación final}{35}{subsection.2.4.5}%
 \contentsline {subsubsection}{Planificación}{35}{subsection.2.4.5}%
-\contentsline {subsubsection}{Desarrollo - Sprint 4}{35}{subsection.2.4.5}%
-\contentsline {paragraph}{Mejoras en el manejo de errores:}{35}{subsection.2.4.5}%
-\contentsline {paragraph}{Generación de snippets de código:}{36}{lstnumber.2.11.36}%
-\contentsline {paragraph}{Validación de datos en Firebase:}{37}{table.caption.32}%
-\contentsline {paragraph}{Documentación técnica:}{37}{lstnumber.2.13.5}%
-\contentsline {paragraph}{Organización del código:}{38}{lstnumber.2.14.29}%
+\contentsline {subsubsection}{Desarrollo - Sprint 4}{36}{subsection.2.4.5}%
+\contentsline {paragraph}{Mejoras en el manejo de errores:}{36}{subsection.2.4.5}%
+\contentsline {paragraph}{Generación de snippets de código:}{37}{lstnumber.2.11.36}%
+\contentsline {paragraph}{Validación de datos en Firebase:}{38}{table.caption.32}%
+\contentsline {paragraph}{Documentación técnica:}{38}{lstnumber.2.13.5}%
+\contentsline {paragraph}{Organización del código:}{39}{lstnumber.2.14.29}%
 \contentsline {subsubsection}{Resultados y retrospectiva - Sprint 4}{39}{lstnumber.2.14.29}%
 \contentsline {paragraph}{Retrospectiva:}{39}{lstnumber.2.14.29}%
-\contentsline {subsection}{\numberline {2.4.6}Sprint 5 - Arquitectura frontend e interfaz de usuario}{39}{subsection.2.4.6}%
-\contentsline {subsubsection}{Planificación}{39}{subsection.2.4.6}%
-\contentsline {subsubsection}{Desarrollo - Sprint 5}{39}{subsection.2.4.6}%
-\contentsline {paragraph}{Diseño modular de componentes:}{39}{subsection.2.4.6}%
-\contentsline {paragraph}{Estilizado con Tailwind CSS:}{41}{lstnumber.2.15.21}%
-\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 5}{41}{lstnumber.2.15.21}%
-\contentsline {paragraph}{Retrospectiva:}{41}{lstnumber.2.15.21}%
-\contentsline {subsection}{\numberline {2.4.7}Sprint 6 - Lógica de integración y gestión de estado}{41}{subsection.2.4.7}%
-\contentsline {subsubsection}{Planificación}{41}{subsection.2.4.7}%
-\contentsline {subsubsection}{Desarrollo - Sprint 6}{41}{subsection.2.4.7}%
-\contentsline {paragraph}{Contexto Global (Store):}{41}{subsection.2.4.7}%
-\contentsline {paragraph}{Retroalimentación Visual (HU08):}{42}{lstnumber.2.16.24}%
-\contentsline {paragraph}{Manejo de CORS:}{43}{lstnumber.2.16.24}%
-\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 6}{43}{lstnumber.2.16.24}%
-\contentsline {paragraph}{Retrospectiva:}{43}{lstnumber.2.16.24}%
-\contentsline {chapter}{\numberline {3}RESULTADOS, CONCLUSIONES Y RECOMENDACIONES}{44}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Resultados}{44}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Pruebas de inserción de datos}{44}{subsection.3.1.1}%
-\contentsline {subsubsection}{Caso 1: Inserción simple}{44}{subsection.3.1.1}%
-\contentsline {subsubsection}{Caso 2: Inserción masiva (Batch)}{45}{figure.caption.34}%
-\contentsline {subsection}{\numberline {3.1.2}Pruebas de selección y filtrado}{46}{subsection.3.1.2}%
-\contentsline {subsubsection}{Caso 3: Selección total}{46}{subsection.3.1.2}%
-\contentsline {subsubsection}{Caso 4: Búsqueda por ID}{47}{figure.caption.36}%
-\contentsline {subsubsection}{Caso 5: Proyección de columnas}{48}{figure.caption.37}%
-\contentsline {subsubsection}{Caso 6: Filtrado por rango}{49}{figure.caption.38}%
-\contentsline {subsubsection}{Caso 7: Filtrado por patrones (LIKE)}{50}{figure.caption.39}%
-\contentsline {subsubsection}{Caso 8: Patrones insensibles a mayúsculas (ILIKE)}{51}{figure.caption.40}%
-\contentsline {subsubsection}{Caso 9: Lógica compuesta (AND)}{52}{figure.caption.41}%
-\contentsline {subsection}{\numberline {3.1.3}Pruebas de manipulación de datos}{53}{subsection.3.1.3}%
-\contentsline {subsubsection}{Caso 10: Actualización parcial (Batch update)}{53}{subsection.3.1.3}%
-\contentsline {subsubsection}{Caso 11: Eliminación lógica/física}{54}{figure.caption.43}%
-\contentsline {subsection}{\numberline {3.1.4}Pruebas de manejo de errores}{55}{subsection.3.1.4}%
-\contentsline {subsubsection}{Caso 12: Error de sintaxis}{55}{subsection.3.1.4}%
-\contentsline {subsubsection}{Caso 13: Error semántico (Tabla inexistente)}{56}{figure.caption.45}%
-\contentsline {subsection}{\numberline {3.1.5}Pruebas no funcionales: Usabilidad}{57}{subsection.3.1.5}%
-\contentsline {subsubsection}{Resultados de la evaluación heurística}{57}{subsection.3.1.5}%
-\contentsline {paragraph}{H1: Visibilidad del estado del sistema (Severidad: 0)}{57}{subsection.3.1.5}%
-\contentsline {paragraph}{H2: Correspondencia con el mundo real (Severidad: 0)}{57}{subsection.3.1.5}%
-\contentsline {paragraph}{H3: Control y libertad del usuario (Severidad: 0)}{58}{subsection.3.1.5}%
-\contentsline {paragraph}{H4: Consistencia y estándares (Severidad: 0)}{58}{figure.caption.47}%
-\contentsline {paragraph}{H5: Prevención de errores (Severidad: 0)}{58}{figure.caption.47}%
-\contentsline {paragraph}{H6: Reconocimiento antes que recuerdo (Severidad: 0)}{59}{figure.caption.48}%
-\contentsline {paragraph}{H7: Flexibilidad y eficiencia de uso (Severidad: 1)}{59}{figure.caption.48}%
-\contentsline {paragraph}{H8: Estética y diseño minimalista (Severidad: 0)}{60}{figure.caption.49}%
-\contentsline {paragraph}{H9: Ayuda a reconocer y recuperar errores (Severidad: 0)}{61}{figure.caption.50}%
-\contentsline {paragraph}{H10: Ayuda y documentación (Severidad: 2)}{61}{figure.caption.51}%
-\contentsline {subsubsection}{Reporte de severidad}{61}{figure.caption.51}%
-\contentsline {section}{\numberline {3.2}Conclusiones}{62}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Recomendaciones}{63}{section.3.3}%
-\contentsline {chapter}{\numberline {4}REFERENCIAS BIBLIOGRÁFICAS}{65}{chapter.4}%
-\contentsline {chapter}{\numberline {I}Conjunto de datos (Dataset NoSQL)}{68}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {II}Detalle de planificación (Backlog)}{70}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {III}Guía de instalación y despliegue}{74}{appendix.Alph3}%
-\contentsline {chapter}{\numberline {IV}Enlaces y recursos}{76}{appendix.Alph4}%
+\contentsline {subsection}{\numberline {2.4.6}Sprint 5 - Arquitectura frontend e interfaz de usuario}{40}{subsection.2.4.6}%
+\contentsline {subsubsection}{Planificación}{40}{subsection.2.4.6}%
+\contentsline {subsubsection}{Desarrollo - Sprint 5}{40}{subsection.2.4.6}%
+\contentsline {paragraph}{Diseño modular de componentes:}{40}{subsection.2.4.6}%
+\contentsline {paragraph}{Estilizado con Tailwind CSS:}{42}{lstnumber.2.15.21}%
+\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 5}{42}{lstnumber.2.15.21}%
+\contentsline {paragraph}{Retrospectiva:}{42}{lstnumber.2.15.21}%
+\contentsline {subsection}{\numberline {2.4.7}Sprint 6 - Lógica de integración y gestión de estado}{42}{subsection.2.4.7}%
+\contentsline {subsubsection}{Planificación}{42}{subsection.2.4.7}%
+\contentsline {subsubsection}{Desarrollo - Sprint 6}{42}{subsection.2.4.7}%
+\contentsline {paragraph}{Contexto Global (Store):}{42}{subsection.2.4.7}%
+\contentsline {paragraph}{Retroalimentación Visual (HU08):}{43}{lstnumber.2.16.24}%
+\contentsline {paragraph}{Manejo de CORS:}{44}{lstnumber.2.16.24}%
+\contentsline {subsubsection}{Resultados y retrospectiva - Sprint 6}{44}{lstnumber.2.16.24}%
+\contentsline {paragraph}{Retrospectiva:}{44}{lstnumber.2.16.24}%
+\contentsline {chapter}{\numberline {3}RESULTADOS, CONCLUSIONES Y RECOMENDACIONES}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Resultados}{45}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Pruebas de inserción de datos}{45}{subsection.3.1.1}%
+\contentsline {subsubsection}{Caso 1: Inserción simple}{45}{subsection.3.1.1}%
+\contentsline {subsubsection}{Caso 2: Inserción masiva (Batch)}{46}{figure.caption.34}%
+\contentsline {subsection}{\numberline {3.1.2}Pruebas de selección y filtrado}{47}{subsection.3.1.2}%
+\contentsline {subsubsection}{Caso 3: Selección total}{47}{subsection.3.1.2}%
+\contentsline {subsubsection}{Caso 4: Búsqueda por ID}{48}{figure.caption.36}%
+\contentsline {subsubsection}{Caso 5: Proyección de columnas}{49}{figure.caption.37}%
+\contentsline {subsubsection}{Caso 6: Filtrado por rango}{50}{figure.caption.38}%
+\contentsline {subsubsection}{Caso 7: Filtrado por patrones (LIKE)}{51}{figure.caption.39}%
+\contentsline {subsubsection}{Caso 8: Patrones insensibles a mayúsculas (ILIKE)}{52}{figure.caption.40}%
+\contentsline {subsubsection}{Caso 9: Lógica compuesta (AND)}{53}{figure.caption.41}%
+\contentsline {subsection}{\numberline {3.1.3}Pruebas de manipulación de datos}{54}{subsection.3.1.3}%
+\contentsline {subsubsection}{Caso 10: Actualización parcial (Batch update)}{54}{subsection.3.1.3}%
+\contentsline {subsubsection}{Caso 11: Eliminación lógica/física}{55}{figure.caption.43}%
+\contentsline {subsection}{\numberline {3.1.4}Pruebas de manejo de errores}{56}{subsection.3.1.4}%
+\contentsline {subsubsection}{Caso 12: Error de sintaxis}{56}{subsection.3.1.4}%
+\contentsline {subsubsection}{Caso 13: Error semántico (Tabla inexistente)}{57}{figure.caption.45}%
+\contentsline {subsection}{\numberline {3.1.5}Pruebas no funcionales: Usabilidad}{58}{subsection.3.1.5}%
+\contentsline {subsubsection}{Resultados de la evaluación heurística}{58}{subsection.3.1.5}%
+\contentsline {paragraph}{H1: Visibilidad del estado del sistema (Severidad: 0)}{58}{subsection.3.1.5}%
+\contentsline {paragraph}{H2: Correspondencia con el mundo real (Severidad: 0)}{58}{subsection.3.1.5}%
+\contentsline {paragraph}{H3: Control y libertad del usuario (Severidad: 0)}{59}{subsection.3.1.5}%
+\contentsline {paragraph}{H4: Consistencia y estándares (Severidad: 0)}{59}{figure.caption.47}%
+\contentsline {paragraph}{H5: Prevención de errores (Severidad: 0)}{59}{figure.caption.47}%
+\contentsline {paragraph}{H6: Reconocimiento antes que recuerdo (Severidad: 0)}{60}{figure.caption.48}%
+\contentsline {paragraph}{H7: Flexibilidad y eficiencia de uso (Severidad: 1)}{60}{figure.caption.48}%
+\contentsline {paragraph}{H8: Estética y diseño minimalista (Severidad: 0)}{61}{figure.caption.49}%
+\contentsline {paragraph}{H9: Ayuda a reconocer y recuperar errores (Severidad: 0)}{62}{figure.caption.50}%
+\contentsline {paragraph}{H10: Ayuda y documentación (Severidad: 2)}{62}{figure.caption.51}%
+\contentsline {subsubsection}{Reporte de severidad}{62}{figure.caption.51}%
+\contentsline {section}{\numberline {3.2}Conclusiones}{63}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Recomendaciones}{64}{section.3.3}%
+\contentsline {chapter}{\numberline {4}REFERENCIAS BIBLIOGRÁFICAS}{66}{chapter.4}%
+\contentsline {chapter}{\numberline {I}Conjunto de datos (Dataset NoSQL)}{69}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {II}Detalle de planificación (Backlog)}{71}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {III}Guía de instalación y despliegue}{75}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {IV}Enlaces y recursos}{80}{appendix.Alph4}%

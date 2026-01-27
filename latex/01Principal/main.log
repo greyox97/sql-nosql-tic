@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.25)  25 JAN 2026 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.25)  26 JAN 2026 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1118,12 +1118,13 @@ Overfull \hbox (13.21814pt too wide) in paragraph at lines 464--465
 []\T1/phv/b/n/10.95 Capa bac-kend (Flask): \T1/phv/m/n/10.95 Ac-túa co-mo el nú-cleo de pro-ce-sa-mien-to. El \T1/cmtt/m/n/10.95 ConsultaController
  []
 
-<../02Figures/02Chapter/C2.prototipos_ui.png, id=579, 1445.4pt x 813.0375pt>
+[24]
+<../02Figures/02Chapter/C2.prototipos_ui.png, id=586, 1445.4pt x 813.0375pt>
 File: ../02Figures/02Chapter/C2.prototipos_ui.png Graphic file (type png)
 <use ../02Figures/02Chapter/C2.prototipos_ui.png>
 Package pdftex.def Info: ../02Figures/02Chapter/C2.prototipos_ui.png  used on input line 485.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
-[24] [25 <../02Figures/02Chapter/C2.prototipos_ui.png>] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+ [25 <../02Figures/02Chapter/C2.prototipos_ui.png>] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 510.
@@ -1131,12 +1132,12 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 567.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-) [27]
+) [27] [28]
 Overfull \hbox (1.18787pt too wide) in paragraph at lines 614--615
 []\T1/phv/m/n/10.95 El ob-je-ti-vo fue im-ple-men-tar la ló-gi-ca de tra-duc-ción (HU03) y el ma-ne-jo de erro-res (HU04).
  []
 
-[28] [29] [30]
+[29] [30]
 Underfull \hbox (badness 10000) in paragraph at lines 738--738
 []|\T1/cmtt/m/n/10.95 SELECT * FROM usuarios WHERE id =
  []
@@ -1156,13 +1157,13 @@ Overfull \hbox (3.14774pt too wide) in paragraph at lines 734--746
  [][] 
  []
 
-[31]
-<../02Figures/02Chapter/C2.sequence_parser.png, id=752, 8222.72pt x 6721.11pt>
+[31] [32]
+<../02Figures/02Chapter/C2.sequence_parser.png, id=756, 8222.72pt x 6721.11pt>
 File: ../02Figures/02Chapter/C2.sequence_parser.png Graphic file (type png)
 <use ../02Figures/02Chapter/C2.sequence_parser.png>
 Package pdftex.def Info: ../02Figures/02Chapter/C2.sequence_parser.png  used on input line 767.
 (pdftex.def)             Requested size: 441.01773pt x 360.3809pt.
- [32] [33 <../02Figures/02Chapter/C2.sequence_parser.png>]
+ [33 <../02Figures/02Chapter/C2.sequence_parser.png>]
 
 Package caption Warning: \label without proper reference on input line 805.
 See the caption package documentation for explanation.
@@ -1170,12 +1171,12 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `C2.firebase_structure' on page 34 undefined on input line 801.
 
-<../02Figures/02Chapter/C2.firebase_structure.png, id=771, 1200.73593pt x 704.6325pt>
+<../02Figures/02Chapter/C2.firebase_structure.png, id=763, 1200.73593pt x 704.6325pt>
 File: ../02Figures/02Chapter/C2.firebase_structure.png Graphic file (type png)
 <use ../02Figures/02Chapter/C2.firebase_structure.png>
 Package pdftex.def Info: ../02Figures/02Chapter/C2.firebase_structure.png  used on input line 806.
 (pdftex.def)             Requested size: 374.86775pt x 219.98209pt.
-[34 <../02Figures/02Chapter/C2.firebase_structure.png>] [35] [36] [37] [38]
+[34] [35 <../02Figures/02Chapter/C2.firebase_structure.png>] [36] [37] [38] [39]
 Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
 []|\T1/phv/m/n/10.95 Panel in-ter-ac-ti-vo con fil-tros por ti-
  []
@@ -1185,145 +1186,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
 \T1/phv/m/n/10.95 po (In-fo/Error) y con-tro-les de ex-pan-
  []
 
-[39] [40] [41] [42]) [43]
+[40] [41] [42] [43]) [44]
 Cap\'{\i }tulo 3.
 (../04Sections/03ContentOfDocument/03Chapter/03-00-Chapter.tex (../04Sections/03ContentOfDocument/03Chapter/03-01-Section.tex (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-<../02Figures/03Chapter/R_InsertSimple.png, id=959, 1445.4pt x 813.0375pt>
+<../02Figures/03Chapter/R_InsertSimple.png, id=963, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_InsertSimple.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_InsertSimple.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_InsertSimple.png  used on input line 22.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [44
+ [45
 
 ]
-<../02Figures/03Chapter/R_InsertBatch.png, id=966, 1445.4pt x 813.0375pt>
+<../02Figures/03Chapter/R_InsertBatch.png, id=970, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_InsertBatch.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_InsertBatch.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_InsertBatch.png  used on input line 38.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [45 <../02Figures/03Chapter/R_InsertSimple.png>]
-<../02Figures/03Chapter/R_SelectAll.png, id=974, 1445.4pt x 813.0375pt>
+ [46 <../02Figures/03Chapter/R_InsertSimple.png>]
+<../02Figures/03Chapter/R_SelectAll.png, id=978, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectAll.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectAll.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectAll.png  used on input line 58.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [46 <../02Figures/03Chapter/R_InsertBatch.png>]
-<../02Figures/03Chapter/R_SelectID.png, id=982, 1445.4pt x 813.0375pt>
+ [47 <../02Figures/03Chapter/R_InsertBatch.png>]
+<../02Figures/03Chapter/R_SelectID.png, id=986, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectID.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectID.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectID.png  used on input line 74.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [47 <../02Figures/03Chapter/R_SelectAll.png>]
-<../02Figures/03Chapter/R_SelectProjection.png, id=990, 1445.4pt x 813.0375pt>
+ [48 <../02Figures/03Chapter/R_SelectAll.png>]
+<../02Figures/03Chapter/R_SelectProjection.png, id=994, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectProjection.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectProjection.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectProjection.png  used on input line 90.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [48 <../02Figures/03Chapter/R_SelectID.png>]
-<../02Figures/03Chapter/R_SelectGreater.png, id=998, 1445.4pt x 813.0375pt>
+ [49 <../02Figures/03Chapter/R_SelectID.png>]
+<../02Figures/03Chapter/R_SelectGreater.png, id=1003, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectGreater.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectGreater.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectGreater.png  used on input line 106.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [49 <../02Figures/03Chapter/R_SelectProjection.png>]
-<../02Figures/03Chapter/R_SelectLike.png, id=1007, 1445.4pt x 813.0375pt>
+ [50 <../02Figures/03Chapter/R_SelectProjection.png>]
+<../02Figures/03Chapter/R_SelectLike.png, id=1011, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectLike.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectLike.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectLike.png  used on input line 122.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [50 <../02Figures/03Chapter/R_SelectGreater.png>]
-<../02Figures/03Chapter/R_SelectILike.png, id=1016, 1445.4pt x 813.0375pt>
+ [51 <../02Figures/03Chapter/R_SelectGreater.png>]
+<../02Figures/03Chapter/R_SelectILike.png, id=1020, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectILike.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectILike.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectILike.png  used on input line 138.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [51 <../02Figures/03Chapter/R_SelectLike.png>]
-<../02Figures/03Chapter/R_SelectComplex.png, id=1024, 1445.4pt x 813.0375pt>
+ [52 <../02Figures/03Chapter/R_SelectLike.png>]
+<../02Figures/03Chapter/R_SelectComplex.png, id=1028, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_SelectComplex.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_SelectComplex.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_SelectComplex.png  used on input line 154.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [52 <../02Figures/03Chapter/R_SelectILike.png>]
-<../02Figures/03Chapter/R_Update.png, id=1032, 1445.4pt x 813.0375pt>
+ [53 <../02Figures/03Chapter/R_SelectILike.png>]
+<../02Figures/03Chapter/R_Update.png, id=1036, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Update.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Update.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Update.png  used on input line 172.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [53 <../02Figures/03Chapter/R_SelectComplex.png>]
-<../02Figures/03Chapter/R_Delete.png, id=1040, 1445.4pt x 813.0375pt>
+ [54 <../02Figures/03Chapter/R_SelectComplex.png>]
+<../02Figures/03Chapter/R_Delete.png, id=1044, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Delete.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Delete.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Delete.png  used on input line 188.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [54 <../02Figures/03Chapter/R_Update.png>]
-<../02Figures/03Chapter/R_ErrorSyntax.png, id=1048, 1445.4pt x 813.0375pt>
+ [55 <../02Figures/03Chapter/R_Update.png>]
+<../02Figures/03Chapter/R_ErrorSyntax.png, id=1053, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_ErrorSyntax.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_ErrorSyntax.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_ErrorSyntax.png  used on input line 206.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [55 <../02Figures/03Chapter/R_Delete.png>]
-<../02Figures/03Chapter/R_ErrorSemantic.png, id=1057, 1445.4pt x 813.0375pt>
+ [56 <../02Figures/03Chapter/R_Delete.png>]
+<../02Figures/03Chapter/R_ErrorSemantic.png, id=1061, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_ErrorSemantic.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_ErrorSemantic.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_ErrorSemantic.png  used on input line 222.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [56 <../02Figures/03Chapter/R_ErrorSyntax.png>]
-<../02Figures/03Chapter/R_Heuristic_Control.png, id=1065, 1445.4pt x 813.0375pt>
+ [57 <../02Figures/03Chapter/R_ErrorSyntax.png>]
+<../02Figures/03Chapter/R_Heuristic_Control.png, id=1069, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Heuristic_Control.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Heuristic_Control.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Heuristic_Control.png  used on input line 245.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [57 <../02Figures/03Chapter/R_ErrorSemantic.png>]
-<../02Figures/03Chapter/R_Heuristic_Prevention.png, id=1071, 1445.4pt x 813.0375pt>
+ [58 <../02Figures/03Chapter/R_ErrorSemantic.png>]
+<../02Figures/03Chapter/R_Heuristic_Prevention.png, id=1075, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Heuristic_Prevention.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Heuristic_Prevention.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Heuristic_Prevention.png  used on input line 257.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [58 <../02Figures/03Chapter/R_Heuristic_Control.png>]
-<../02Figures/03Chapter/R_Heuristic_Flexibility.png, id=1077, 1445.4pt x 813.0375pt>
+ [59 <../02Figures/03Chapter/R_Heuristic_Control.png>]
+<../02Figures/03Chapter/R_Heuristic_Flexibility.png, id=1081, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Heuristic_Flexibility.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Heuristic_Flexibility.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Heuristic_Flexibility.png  used on input line 269.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [59 <../02Figures/03Chapter/R_Heuristic_Prevention.png>]
-<../02Figures/03Chapter/R_Heuristic_UI.png, id=1083, 1445.4pt x 813.0375pt>
+ [60 <../02Figures/03Chapter/R_Heuristic_Prevention.png>]
+<../02Figures/03Chapter/R_Heuristic_UI.png, id=1087, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Heuristic_UI.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Heuristic_UI.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Heuristic_UI.png  used on input line 278.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
-<../02Figures/03Chapter/R_Heuristic_Error.png, id=1084, 1445.4pt x 813.0375pt>
+<../02Figures/03Chapter/R_Heuristic_Error.png, id=1088, 1445.4pt x 813.0375pt>
 File: ../02Figures/03Chapter/R_Heuristic_Error.png Graphic file (type png)
 <use ../02Figures/03Chapter/R_Heuristic_Error.png>
 Package pdftex.def Info: ../02Figures/03Chapter/R_Heuristic_Error.png  used on input line 287.
 (pdftex.def)             Requested size: 418.96548pt x 235.66318pt.
- [60 <../02Figures/03Chapter/R_Heuristic_Flexibility.png> <../02Figures/03Chapter/R_Heuristic_UI.png>]) [61 <../02Figures/03Chapter/R_Heuristic_Error.png>] (../04Sections/03ContentOfDocument/03Chapter/03-02-Section.tex [62]) (../04Sections/03ContentOfDocument/03Chapter/03-03-Section.tex [63]))) (../04Sections/04References/00-References.tex [64]
+ [61 <../02Figures/03Chapter/R_Heuristic_Flexibility.png> <../02Figures/03Chapter/R_Heuristic_UI.png>]) [62 <../02Figures/03Chapter/R_Heuristic_Error.png>] (../04Sections/03ContentOfDocument/03Chapter/03-02-Section.tex [63]) (../04Sections/03ContentOfDocument/03Chapter/03-03-Section.tex [64]))) (../04Sections/04References/00-References.tex [65]
 Cap\'{\i }tulo 4.
-[65
+[66
 
-] [66]) (../04Sections/05Annexes/00-Annexes.tex [67]
+] [67]) (../04Sections/05Annexes/00-Annexes.tex [68]
 ANEXO I.
-(../04Sections/05Annexes/AnexoI.tex [68
+(../04Sections/05Annexes/AnexoI.tex [69
 
-]) [69]
+]) [70]
 ANEXO II.
-(../04Sections/05Annexes/Anexo_Planificacion.tex [70
+(../04Sections/05Annexes/Anexo_Planificacion.tex [71
 
-] [71]
+] [72]
 Underfull \hbox (badness 4913) in paragraph at lines 120--120
 []|\T1/phv/m/n/10.95 Diseñar dis-po-si-ción do-ble de pa-ne-les (SQL /
  []
 
-[72]) [73]
+[73]) [74]
 ANEXO III.
-(../04Sections/05Annexes/AnexoII.tex (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+(../04Sections/05Annexes/AnexoII.tex [75
+
+] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [74
-
-]) [75]
+) [76] [77] [78]) [79]
 ANEXO IV.
 (../04Sections/05Annexes/AnexoIII.tex))
 Package minitoc Info: I0009
@@ -1352,7 +1353,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[76
+[80
 
 ] (./main.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1374,18 +1375,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29613 strings out of 467538
- 512458 string characters out of 5423724
- 1684894 words of memory out of 5000000
- 57424 multiletter control sequences out of 15000+600000
+ 29650 strings out of 467538
+ 512839 string characters out of 5423724
+ 1634894 words of memory out of 5000000
+ 57435 multiletter control sequences out of 15000+600000
  694013 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,13n,131p,1644b,2321s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 4514755 bytes).
+Output written on main.pdf (92 pages, 4520895 bytes).
 PDF statistics:
- 1438 PDF objects out of 1440 (max. 8388607)
- 1277 compressed objects within 13 object streams
- 618 named destinations out of 1000 (max. 500000)
+ 1483 PDF objects out of 1728 (max. 8388607)
+ 1317 compressed objects within 14 object streams
+ 644 named destinations out of 1000 (max. 500000)
  479 words of extra memory for PDF output out of 10000 (max. 10000000)
 
