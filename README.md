@@ -67,7 +67,7 @@ En dos terminales separadas:
 
 **Backend:**
 ```bash
-flask run --debug --port 5000
+python app . py
 ```
 
 **Frontend:**
@@ -80,4 +80,5 @@ Visita `http://localhost:3000` en tu navegador.
 ---
 **Autor:** Sebastián Sánchez  
 **Institución:** Escuela Politécnica Nacional  
+
 
