@@ -67,7 +67,7 @@ En dos terminales separadas:
 
 **Backend:**
 ```bash
-python app . py
+python app.py
 ```
 
 **Frontend:**
@@ -80,5 +80,6 @@ Visita `http://localhost:3000` en tu navegador.
 ---
 **Autor:** Sebastián Sánchez  
 **Institución:** Escuela Politécnica Nacional  
+
 
 
