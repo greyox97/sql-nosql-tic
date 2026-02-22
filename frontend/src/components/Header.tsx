@@ -1,10 +1,14 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
+
 interface HeaderProps {
     isConnected: boolean;
 }
 
 export default function Header({ isConnected }: HeaderProps) {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <header className="flex-none flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-[#283039] bg-white dark:bg-[#111418] px-6 py-3">
             <div className="flex items-center gap-4">
@@ -30,14 +34,24 @@ export default function Header({ isConnected }: HeaderProps) {
                     v1.0.0
                 </span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
                 <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 px-3 py-1.5 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-[#283039] transition-colors cursor-default">
                     <span className={`material-symbols-outlined text-[18px] ${isConnected ? "text-green-500" : "text-red-500"}`}>
                         dns
                     </span>
                     <span>{isConnected ? "Conectado" : "Desconectado"}</span>
                 </div>
+                <button
+                    onClick={toggleTheme}
+                    className="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-[#1c2127] hover:text-slate-700 dark:hover:text-slate-200 transition-colors"
+                    title={theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
+                >
+                    <span className="material-symbols-outlined text-[20px]">
+                        {theme === "dark" ? "light_mode" : "dark_mode"}
+                    </span>
+                </button>
             </div>
         </header>
     );
 }
+

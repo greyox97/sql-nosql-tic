@@ -84,8 +84,8 @@ export default function NoSQLOutputPanel({ consultaParseada, firebaseQueries }: 
                             <button
                                 onClick={() => setActiveTab("javascript")}
                                 className={`px-3 py-1.5 text-xs font-medium transition-colors ${activeTab === "javascript"
-                                        ? "text-amber-600 dark:text-amber-400 border-b-2 border-amber-500 bg-white dark:bg-[#0d1117]"
-                                        : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
+                                    ? "text-amber-600 dark:text-amber-400 border-b-2 border-amber-500 bg-white dark:bg-[#0d1117]"
+                                    : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
                                     }`}
                             >
                                 JavaScript
@@ -93,8 +93,8 @@ export default function NoSQLOutputPanel({ consultaParseada, firebaseQueries }: 
                             <button
                                 onClick={() => setActiveTab("python")}
                                 className={`px-3 py-1.5 text-xs font-medium transition-colors ${activeTab === "python"
-                                        ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-500 bg-white dark:bg-[#0d1117]"
-                                        : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
+                                    ? "text-blue-600 dark:text-blue-400 border-b-2 border-blue-500 bg-white dark:bg-[#0d1117]"
+                                    : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
                                     }`}
                             >
                                 Python
@@ -107,8 +107,10 @@ export default function NoSQLOutputPanel({ consultaParseada, firebaseQueries }: 
                                 <span className="material-symbols-outlined text-sm">content_copy</span>
                             </button>
                         </div>
-                        <div className="flex-1 overflow-auto bg-[#1e1e1e] dark:bg-[#0d1117] p-3">
-                            <pre className={`text-sm font-mono whitespace-pre-wrap leading-relaxed ${activeTab === "javascript" ? "text-amber-300" : "text-blue-300"
+                        <div className="flex-1 overflow-auto bg-gray-100 dark:bg-[#0d1117] p-3">
+                            <pre className={`text-sm font-mono whitespace-pre-wrap leading-relaxed ${activeTab === "javascript"
+                                    ? "text-amber-700 dark:text-amber-300"
+                                    : "text-blue-700 dark:text-blue-300"
                                 }`}>
                                 {currentQuery || "Sin código disponible"}
                             </pre>
